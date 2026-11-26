@@ -19,6 +19,7 @@ import environmentRaw from './data/environment-willpower.json';
 import fullOnePercentRaw from './data/full-one-percent.json';
 import hundredShotRaw from './data/hundred-shot-rule.json';
 import leverageTrapRaw from './data/leverage-trap.json';
+import onePercentSignalRaw from './data/one-percent-signal.json';
 import openingDemoRaw from './data/opening-demo.json';
 import smartBrokeRaw from './data/smart-people-broke.json';
 import sunkCostRaw from './data/sunk-cost-trap.json';
@@ -58,6 +59,11 @@ import {
   ReputationComposition,
   ReputationStoryboard,
 } from './ReputationComposition';
+import {
+  getSignalTotalFrames,
+  SignalComposition,
+  SignalStoryboard,
+} from './SignalComposition';
 import { VideoStoryboard } from './schema/storyboard';
 import { getTotalFrames, VideoComposition } from './VideoComposition';
 import {
@@ -79,6 +85,7 @@ const asymmetricBet = asymmetricBetRaw as AsymmetricStoryboard;
 const environmentWillpower = environmentRaw as EnvironmentStoryboard;
 const visibilityParadox = visibilityRaw as VisibilityStoryboard;
 const sunkCostTrap = sunkCostRaw as SunkCostStoryboard;
+const onePercentSignal = onePercentSignalRaw as SignalStoryboard;
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -224,6 +231,17 @@ export const RemotionRoot: React.FC = () => {
         height={sunkCostTrap.height}
         defaultProps={{
           storyboard: sunkCostTrap,
+        }}
+      />
+      <Composition
+        id="OnePercentSignal"
+        component={SignalComposition}
+        durationInFrames={getSignalTotalFrames(onePercentSignal)}
+        fps={onePercentSignal.fps}
+        width={onePercentSignal.width}
+        height={onePercentSignal.height}
+        defaultProps={{
+          storyboard: onePercentSignal,
         }}
       />
     </>
