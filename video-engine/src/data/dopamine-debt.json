@@ -1,57 +1,57 @@
-{
-  "title": "The Dopamine Debt: Why Nothing Feels Exciting Anymore",
-  "fps": 60,
-  "width": 1920,
-  "height": 1080,
-  "scenes": [
-    {
-      "id": "dop-01-oscilloscope",
-      "type": "baseline-oscilloscope",
-      "durationSec": 14.65,
-      "narration": "You are not lazy, and you are not broken. Your brain's dopamine baseline is simply bankrupt. Every unnatural spike you chase forces an equal and opposite crash right below zero."
-    },
-    {
-      "id": "dop-02-scroll-slot",
-      "type": "scroll-slot-machine",
-      "durationSec": 14.65,
-      "narration": "Every morning, before your feet even touch the floor, you pull a glowing slot machine in your pocket. Endless feeds, instant likes, and rapid novelty flood your system in minutes."
-    },
-    {
-      "id": "dop-03-receptors",
-      "type": "receptor-lock",
-      "durationSec": 12.7,
-      "narration": "Your brain was never designed for that level of artificial stimulation. To protect itself from overload, it quietly shuts down your dopamine receptors one by one."
-    },
-    {
-      "id": "dop-04-bankruptcy",
-      "type": "fuel-bankruptcy",
-      "durationSec": 12.21,
-      "narration": "That is why your motivation tank feels permanently empty. You are not starting the day at one hundred percent—you are starting deep inside dopamine debt."
-    },
-    {
-      "id": "dop-05-threshold",
-      "type": "stimulus-threshold",
-      "durationSec": 11.23,
-      "narration": "When your stimulation threshold gets pushed that high, meaningful work like reading, building, or training cannot even register. Normal life stops feeling rewarding."
-    },
-    {
-      "id": "dop-06-boredom",
-      "type": "boredom-chamber",
-      "durationSec": 12.21,
-      "narration": "The cure is not another productivity hack. It is seventy-two hours of deliberate boredom—cutting the noise, silencing the feeds, and letting the static finally fade."
-    },
-    {
-      "id": "dop-07-thermostat",
-      "type": "thermostat-reset",
-      "durationSec": 12.7,
-      "narration": "When you stop flooding the circuit, your brain recalibrates like a thermostat. Shut receptors reopen, sensitivity returns, and your baseline rises back to where it belongs."
-    },
-    {
-      "id": "dop-08-clarity",
-      "type": "clarity-horizon",
-      "durationSec": 8.78,
-      "narration": "Suddenly, hard work feels magnetic again. Focus feels effortless. Reset your baseline, and you reclaim your entire drive."
-    }
-  ],
-  "audioFile": "audio/dopamine-debt.wav"
+﻿{
+    "title":  "The Dopamine Debt: Why Nothing Feels Exciting Anymore",
+    "fps":  60,
+    "width":  1920,
+    "height":  1080,
+    "scenes":  [
+                   {
+                       "id":  "dop-01-oscilloscope",
+                       "type":  "baseline-oscilloscope",
+                       "durationSec":  11.69,
+                       "narration":  "You are not lazy, and you are not broken. Your brain\u0027s dopamine baseline is simply bankrupt. Every unnatural spike you chase forces an equal and opposite crash right below zero."
+                   },
+                   {
+                       "id":  "dop-02-scroll-slot",
+                       "type":  "scroll-slot-machine",
+                       "durationSec":  11.69,
+                       "narration":  "Every morning, before your feet even touch the floor, you pull a glowing slot machine in your pocket. Endless feeds, instant likes, and rapid novelty flood your system in minutes."
+                   },
+                   {
+                       "id":  "dop-03-receptors",
+                       "type":  "receptor-lock",
+                       "durationSec":  10.14,
+                       "narration":  "Your brain was never designed for that level of artificial stimulation. To protect itself from overload, it quietly shuts down your dopamine receptors one by one."
+                   },
+                   {
+                       "id":  "dop-04-bankruptcy",
+                       "type":  "fuel-bankruptcy",
+                       "durationSec":  9.75,
+                       "narration":  "That is why your motivation tank feels permanently empty. You are not starting the day at one hundred percentâ€”you are starting deep inside dopamine debt."
+                   },
+                   {
+                       "id":  "dop-05-threshold",
+                       "type":  "stimulus-threshold",
+                       "durationSec":  8.96,
+                       "narration":  "When your stimulation threshold gets pushed that high, meaningful work like reading, building, or training cannot even register. Normal life stops feeling rewarding."
+                   },
+                   {
+                       "id":  "dop-06-boredom",
+                       "type":  "boredom-chamber",
+                       "durationSec":  9.75,
+                       "narration":  "The cure is not another productivity hack. It is seventy-two hours of deliberate boredomâ€”cutting the noise, silencing the feeds, and letting the static finally fade."
+                   },
+                   {
+                       "id":  "dop-07-thermostat",
+                       "type":  "thermostat-reset",
+                       "durationSec":  10.14,
+                       "narration":  "When you stop flooding the circuit, your brain recalibrates like a thermostat. Shut receptors reopen, sensitivity returns, and your baseline rises back to where it belongs."
+                   },
+                   {
+                       "id":  "dop-08-clarity",
+                       "type":  "clarity-horizon",
+                       "durationSec":  7,
+                       "narration":  "Suddenly, hard work feels magnetic again. Focus feels effortless. Reset your baseline, and you reclaim your entire drive."
+                   }
+               ],
+    "audioFile":  "audio/dopamine-debt.wav"
 }

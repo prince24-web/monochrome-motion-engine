@@ -7,3 +7,4 @@ out/
 video-engine/out/
 dist/
 video-engine/public/audio/.cache/
+video-engine/.audio-backups/

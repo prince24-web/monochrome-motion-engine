@@ -12,6 +12,8 @@ interface RollingCounterProps {
   labelSize?: number;
   opacity?: number;
   align?: 'center' | 'left' | 'right';
+  scalePulse?: number;
+  showPlusSign?: boolean;
 }
 
 export const RollingCounter: React.FC<RollingCounterProps> = ({
@@ -25,8 +27,14 @@ export const RollingCounter: React.FC<RollingCounterProps> = ({
   labelSize = 22,
   opacity = 1,
   align = 'center',
+  scalePulse = 1,
+  showPlusSign = false,
 }) => {
-  const formatted = `${prefix}${Math.round(value).toLocaleString('en-US')}${suffix}`;
+  const rounded = Math.round(value);
+  // Prevent JavaScript negative-zero (-0) display bug
+  const safeVal = rounded === 0 ? 0 : rounded;
+  const signPrefix = showPlusSign && safeVal > 0 ? '+' : '';
+  const formatted = `${prefix}${signPrefix}${safeVal.toLocaleString('en-US')}${suffix}`;
   const translateX = align === 'center' ? '-50%' : align === 'right' ? '-100%' : '0%';
 
   return (
@@ -35,7 +43,7 @@ export const RollingCounter: React.FC<RollingCounterProps> = ({
         position: 'absolute',
         left: x,
         top: y,
-        transform: `translate(${translateX}, -50%)`,
+        transform: `translate(${translateX}, -50%) scale(${scalePulse.toFixed(4)})`,
         opacity,
         display: 'flex',
         flexDirection: 'column',
