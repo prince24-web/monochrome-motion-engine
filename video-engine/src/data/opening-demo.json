@@ -1,0 +1,50 @@
+{
+  "title": "The 1% Rule - Opening Benchmark",
+  "fps": 60,
+  "width": 1920,
+  "height": 1080,
+  "scenes": [
+    {
+      "id": "scene-1-one-percent",
+      "type": "one-percent-buyer",
+      "durationSec": 4.59,
+      "narration": "You only need one percent of people to love what you sell to get rich.",
+      "props": {
+        "counterLabel": "YOUR MONEY",
+        "counterStart": 9893,
+        "counterMid": 28411,
+        "counterEnd": 83515,
+        "counterPrefix": "$",
+        "pillText": "THE 1%",
+        "highlightIndex": 46
+      }
+    },
+    {
+      "id": "scene-2-needs-everyone",
+      "type": "progress-ring-goal",
+      "durationSec": 3.37,
+      "narration": "Most people believe they need everyone to like what they do.",
+      "props": {
+        "pillText": "NEEDS EVERYONE",
+        "counterLabel": "LIKED BY",
+        "percentStart": 2,
+        "percentEnd": 20,
+        "targetLabel": "TARGET: 100 %"
+      }
+    },
+    {
+      "id": "scene-3-proof-failing",
+      "type": "failing-gauge",
+      "durationSec": 5.81,
+      "narration": "So the moment a few people ignore them, they treat it as proof that the whole thing is failing.",
+      "props": {
+        "pillText": "PROOF IT'S FAILING",
+        "leftLabel": "FAILING",
+        "rightLabel": "WORKING",
+        "ignoredLabel": "3 IGNORED",
+        "ignoredCount": 3
+      }
+    }
+  ],
+  "audioFile": "audio/voiceover.wav"
+}

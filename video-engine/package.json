@@ -1,0 +1,30 @@
+{
+  "name": "monochrome-motion-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts OpeningDemo out/opening-demo.mp4 --codec=h264 --crf=16",
+    "render:full": "remotion render src/index.ts FullOnePercent out/full-one-percent.mp4 --codec=h264 --crf=16",
+    "still": "remotion still src/index.ts OpeningDemo",
+    "voice": "tsx scripts/generate-voice.ts",
+    "storyboard": "tsx scripts/generate-storyboard.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "@remotion/cli": "^4.0.290",
+    "@remotion/google-fonts": "^4.0.290",
+    "dotenv": "^16.4.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.290"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}

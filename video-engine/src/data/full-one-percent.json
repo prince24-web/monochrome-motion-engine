@@ -1,0 +1,176 @@
+{
+  "title": "The 1% Rule - Complete 12-Scene Showcase",
+  "fps": 60,
+  "width": 1920,
+  "height": 1080,
+  "scenes": [
+    {
+      "id": "scene-01-one-percent",
+      "type": "one-percent-buyer",
+      "durationSec": 4.95,
+      "narration": "You only need one percent of people to love what you sell to get rich.",
+      "props": {
+        "counterLabel": "YOUR MONEY",
+        "counterStart": 9893,
+        "counterMid": 28411,
+        "counterEnd": 83515,
+        "counterPrefix": "$",
+        "pillText": "THE 1%",
+        "highlightIndex": 46
+      }
+    },
+    {
+      "id": "scene-02-needs-everyone",
+      "type": "progress-ring-goal",
+      "durationSec": 3.63,
+      "narration": "Most people believe they need everyone to like what they do.",
+      "props": {
+        "pillText": "NEEDS EVERYONE",
+        "counterLabel": "LIKED BY",
+        "percentStart": 2,
+        "percentEnd": 20,
+        "targetLabel": "TARGET: 100 %"
+      }
+    },
+    {
+      "id": "scene-03-proof-failing",
+      "type": "failing-gauge",
+      "durationSec": 6.27,
+      "narration": "So the moment a few people ignore them, they treat it as proof that the whole thing is failing.",
+      "props": {
+        "pillText": "PROOF IT'S FAILING",
+        "leftLabel": "FAILING",
+        "rightLabel": "WORKING",
+        "ignoredLabel": "3 IGNORED",
+        "ignoredCount": 3
+      }
+    },
+    {
+      "id": "scene-04-offends-nobody",
+      "type": "morphing-shape",
+      "durationSec": 3.63,
+      "narration": "And they keep adjusting what they sell until it offends nobody.",
+      "props": {
+        "versionStart": 1,
+        "versionEnd": 6,
+        "lovedStart": 1200,
+        "lovedEnd": 131,
+        "pillText": "OFFENDS NOBODY"
+      }
+    },
+    {
+      "id": "scene-05-majority-not-required",
+      "type": "majority-crowd",
+      "durationSec": 3.3,
+      "narration": "But getting rich never required the approval of the majority.",
+      "props": {
+        "leftLabel": "GETTING RICH",
+        "majorityLabel": "MAJORITY 51 %",
+        "majorityPercent": 51,
+        "pillText": "NOT REQUIRED"
+      }
+    },
+    {
+      "id": "scene-06-global-scale",
+      "type": "wireframe-globe",
+      "durationSec": 5.83,
+      "narration": "Because more than eight billion people are alive, and over five billion of them have internet access.",
+      "props": {
+        "topLabelA": "PEOPLE ALIVE",
+        "countA": 8000000000,
+        "pillA": "8 BILLION ALIVE",
+        "topLabelB": "ONLINE",
+        "countB": 5000000000,
+        "pillB": "5 BILLION ONLINE"
+      }
+    },
+    {
+      "id": "scene-07-one-percent-of-one-percent",
+      "type": "nested-zoom-grid",
+      "durationSec": 8.41,
+      "narration": "One percent of those five billion is fifty million people. So even if you only reached one percent of that one percent...",
+      "props": {
+        "outerPill": "1% OF THEM",
+        "outerCounterLabel": "1% OF 5 BILLION",
+        "outerCounterValue": 50000000,
+        "bottomCaption": "5,000,000,000 ONLINE",
+        "innerPill": "1% OF THAT 1%"
+      }
+    },
+    {
+      "id": "scene-08-still-500k-buyers",
+      "type": "buyer-queue",
+      "durationSec": 3.06,
+      "narration": "...you would still have five hundred thousand buyers.",
+      "props": {
+        "counterLabel": "BUYERS",
+        "counterStart": 38100,
+        "counterEnd": 500000,
+        "pillText": "STILL 500,000 BUYERS"
+      }
+    },
+    {
+      "id": "scene-09-entire-life-timeline",
+      "type": "timeline-scrubber",
+      "durationSec": 7.26,
+      "narration": "You could be ignored by ninety-nine out of every hundred people for your entire life and still get rich.",
+      "props": {
+        "leftMetricLabel": "IGNORED BY",
+        "leftMetricValue": "99 / 100",
+        "rightMetricLabel": "HIS MONEY",
+        "moneyStart": 2000,
+        "moneyEnd": 243300,
+        "pillText": "YOUR ENTIRE LIFE",
+        "startAge": 20,
+        "endAge": 80
+      }
+    },
+    {
+      "id": "scene-10-mathematically-irrelevant",
+      "type": "wireframe-calculator",
+      "durationSec": 5.35,
+      "narration": "Because the size of the market makes the opinion of the majority mathematically irrelevant.",
+      "props": {
+        "screenHeader": "MARKET",
+        "line1": "5,000,000,000",
+        "line2": "× 1%",
+        "resultLine": "= 50,000,000",
+        "sideBoxTitle": "99% SAY NO",
+        "sideBoxSubtitle": "THE MAJORITY",
+        "pillText": "MATHEMATICALLY IRRELEVANT"
+      }
+    },
+    {
+      "id": "scene-11-tribe-and-scale",
+      "type": "tribe-scale",
+      "durationSec": 11.85,
+      "narration": "Rejection only feels final because your brain learned to measure approval in small groups where ninety-nine rejections meant everyone you knew. So it still treats a handful of no's as dangerous.",
+      "props": {
+        "introPill": "REJECTION FEELS FINAL",
+        "groupPill": "SMALL GROUPS",
+        "groupSizeLabel": "50",
+        "rejectedEnd": 99,
+        "everyonePill": "EVERYONE YOU KNEW",
+        "scalePill": "A HANDFUL OF NO'S",
+        "leftPanLabel": "5 NO'S",
+        "rightPanLabel": "EVERYONE ELSE",
+        "warningLabel": "DANGEROUS"
+      }
+    },
+    {
+      "id": "scene-12-one-percent-is-enough",
+      "type": "growth-curve",
+      "durationSec": 8.4,
+      "narration": "You never needed everyone to love what you sell, and the one percent who do were always enough to make you rich.",
+      "props": {
+        "counterLabel": "YOUR MONEY",
+        "moneyStart": 7904,
+        "moneyEnd": 1000900,
+        "headlineText": "1% IS ENOUGH.",
+        "crowdPillText": "THE 1% WHO DO",
+        "axisLabel": "TIME"
+      }
+    }
+  ],
+  "audioFile": "audio/full-one-percent.wav"
+}

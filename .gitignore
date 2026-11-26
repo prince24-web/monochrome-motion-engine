@@ -1,0 +1,9 @@
+.env
+.env.*
+node_modules/
+video-engine/node_modules/
+__pycache__/
+out/
+video-engine/out/
+dist/
+video-engine/public/audio/.cache/
