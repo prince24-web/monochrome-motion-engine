@@ -1,0 +1,57 @@
+{
+  "title": "Why Your Environment Beats Your Willpower Every Time",
+  "fps": 60,
+  "width": 1920,
+  "height": 1080,
+  "scenes": [
+    {
+      "id": "env-01-battery",
+      "type": "draining-battery",
+      "durationSec": 10.7,
+      "narration": "Willpower is not a superpower—it is a fragile battery. Every decision you make drains it, until by three in the afternoon you have almost nothing left in the tank."
+    },
+    {
+      "id": "env-02-friction-wall",
+      "type": "friction-wall",
+      "durationSec": 11.06,
+      "narration": "Disciplined people are rarely fighting harder temptations than you. They simply put tall walls of friction in front of bad habits, and remove every obstacle in front of good ones."
+    },
+    {
+      "id": "env-03-gravity-ramp",
+      "type": "gravity-ramp",
+      "durationSec": 11.8,
+      "narration": "When you rely on willpower, you are pushing a boulder uphill every single day. When you engineer your environment, you tilt the floor so gravity pulls you straight into the right habits."
+    },
+    {
+      "id": "env-04-circuit",
+      "type": "trigger-circuit",
+      "durationSec": 11.43,
+      "narration": "Your brain runs on simple visual circuits: cue, routine, reward. Leave your phone on the desk and the circuit fires automatically. Leave your notebook open and a different circuit takes over."
+    },
+    {
+      "id": "env-05-switch",
+      "type": "default-path-switch",
+      "durationSec": 12.54,
+      "narration": "Humans are wired to follow the path of least resistance. You do not need to become a superhuman—you just need to switch the track so the easiest default choice is also the right one."
+    },
+    {
+      "id": "env-06-floorplan",
+      "type": "room-architecture",
+      "durationSec": 12.17,
+      "narration": "Look around the room you spend most of your time in. Every object within arm's reach is silently voting for the person you are becoming. Redesign the room, and you redesign your behavior."
+    },
+    {
+      "id": "env-07-autopilot",
+      "type": "autopilot-rail",
+      "durationSec": 10.7,
+      "narration": "Once your workspace, phone, and schedule are built for focus, good habits stop feeling like a daily battle. They run silently on an autopilot rail at zero mental cost."
+    },
+    {
+      "id": "env-08-finale",
+      "type": "effortless-flow-finale",
+      "durationSec": 7.01,
+      "narration": "Stop blaming your discipline for a broken setup. Stop fighting yourself—design your environment, and let autopilot carry you forward."
+    }
+  ],
+  "audioFile": "audio/environment-willpower.wav"
+}

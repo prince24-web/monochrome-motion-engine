@@ -15,6 +15,7 @@ import attentionTaxRaw from './data/attention-tax.json';
 import compoundingRepRaw from './data/compounding-reputation.json';
 import consistencyRaw from './data/consistency-beats-talent.json';
 import dopamineDebtRaw from './data/dopamine-debt.json';
+import environmentRaw from './data/environment-willpower.json';
 import fullOnePercentRaw from './data/full-one-percent.json';
 import hundredShotRaw from './data/hundred-shot-rule.json';
 import leverageTrapRaw from './data/leverage-trap.json';
@@ -25,6 +26,11 @@ import {
   DopamineStoryboard,
   getDopamineTotalFrames,
 } from './DopamineComposition';
+import {
+  EnvironmentComposition,
+  EnvironmentStoryboard,
+  getEnvironmentTotalFrames,
+} from './EnvironmentComposition';
 import {
   getHundredShotTotalFrames,
   HundredShotComposition,
@@ -58,6 +64,7 @@ const smartPeopleBroke = smartBrokeRaw as SmartBrokeStoryboard;
 const attentionTax = attentionTaxRaw as AttentionStoryboard;
 const compoundingReputation = compoundingRepRaw as ReputationStoryboard;
 const asymmetricBet = asymmetricBetRaw as AsymmetricStoryboard;
+const environmentWillpower = environmentRaw as EnvironmentStoryboard;
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -170,6 +177,17 @@ export const RemotionRoot: React.FC = () => {
         height={asymmetricBet.height}
         defaultProps={{
           storyboard: asymmetricBet,
+        }}
+      />
+      <Composition
+        id="EnvironmentWillpower"
+        component={EnvironmentComposition}
+        durationInFrames={getEnvironmentTotalFrames(environmentWillpower)}
+        fps={environmentWillpower.fps}
+        width={environmentWillpower.width}
+        height={environmentWillpower.height}
+        defaultProps={{
+          storyboard: environmentWillpower,
         }}
       />
     </>
