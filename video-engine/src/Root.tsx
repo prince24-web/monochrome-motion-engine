@@ -1,5 +1,11 @@
 import React from 'react';
 import { Composition } from 'remotion';
+import {
+  AttentionComposition,
+  AttentionStoryboard,
+  getAttentionTotalFrames,
+} from './AttentionComposition';
+import attentionTaxRaw from './data/attention-tax.json';
 import consistencyRaw from './data/consistency-beats-talent.json';
 import dopamineDebtRaw from './data/dopamine-debt.json';
 import fullOnePercentRaw from './data/full-one-percent.json';
@@ -37,6 +43,7 @@ const leverageTrap = leverageTrapRaw as LeverageStoryboard;
 const dopamineDebt = dopamineDebtRaw as DopamineStoryboard;
 const hundredShotRule = hundredShotRaw as HundredShotStoryboard;
 const smartPeopleBroke = smartBrokeRaw as SmartBrokeStoryboard;
+const attentionTax = attentionTaxRaw as AttentionStoryboard;
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -116,6 +123,17 @@ export const RemotionRoot: React.FC = () => {
         height={smartPeopleBroke.height}
         defaultProps={{
           storyboard: smartPeopleBroke,
+        }}
+      />
+      <Composition
+        id="AttentionTax"
+        component={AttentionComposition}
+        durationInFrames={getAttentionTotalFrames(attentionTax)}
+        fps={attentionTax.fps}
+        width={attentionTax.width}
+        height={attentionTax.height}
+        defaultProps={{
+          storyboard: attentionTax,
         }}
       />
     </>
