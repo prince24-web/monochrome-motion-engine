@@ -1,6 +1,9 @@
 import React from 'react';
 import { useCurrentFrame, useVideoConfig } from 'remotion';
+import { CameraKeyframe, CameraRig } from '../../components/CameraRig';
 import { PillBadge } from '../../components/PillBadge';
+import { PunchlineCallout } from '../../components/PunchlineCallout';
+import { RollingCounter } from '../../components/RollingCounter';
 import { clampedInterpolate, EASING } from '../../theme/easing';
 import { COLORS, FONT_FAMILY, VIDEO_CONFIG } from '../../theme/tokens';
 
@@ -21,9 +24,11 @@ export const NoiseToSignalWaveScene: React.FC<Props> = ({ durationInFrames }) =>
   );
   const sceneOpacity = Math.min(enterOpacity, exitOpacity);
 
-  // Morphs from chaotic jagged static -> razor-clean pure sine wave!
-  const cleanT = clampedInterpolate(frame, [16, durationInFrames - 22], [0, 1], EASING.expoInOut);
-  const cy = 560;
+  // Morphs continuously from chaotic jagged static -> razor-clean pure sine wave
+  const cleanT = clampedInterpolate(frame, [6, durationInFrames - 12], [0, 1], EASING.smoothInOut);
+  const cy = 540;
+  const clarityPct = Math.round(cleanT * 100);
+
   const pts: string[] = [];
   for (let i = 0; i <= 140; i++) {
     const u = i / 140;
@@ -37,21 +42,77 @@ export const NoiseToSignalWaveScene: React.FC<Props> = ({ durationInFrames }) =>
     pts.push(`${x.toFixed(1)},${y.toFixed(1)}`);
   }
 
+  const cameraKeyframes: CameraKeyframe[] = [
+    { t: 0.0, scale: 1.44, x: -380, y: 0 },
+    { t: 0.38, scale: 1.34, x: 0, y: -25 },
+    { t: 0.7, scale: 1.4, x: 340, y: 15 },
+    { t: 0.9, scale: 1.0, x: 0, y: 0 },
+    { t: 1.0, scale: 1.0, x: 0, y: 0 },
+  ];
+
   return (
     <div style={{ position: 'absolute', inset: 0, opacity: sceneOpacity }}>
-      <svg
-        width={VIDEO_CONFIG.width}
-        height={VIDEO_CONFIG.height}
-        viewBox={`0 0 ${VIDEO_CONFIG.width} ${VIDEO_CONFIG.height}`}
-      >
-        <line x1="180" y1={cy} x2="1740" y2={cy} stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeDasharray="10 10" />
-        <polyline points={pts.join(' ')} fill="none" stroke={COLORS.white} strokeWidth={3 + cleanT * 2.5} filter="url(#soft-glow)" />
-        <text x="960" y="890" textAnchor="middle" fill={COLORS.white} fontFamily={FONT_FAMILY} fontSize="22" fontWeight="800" letterSpacing="0.18em">
-          {cleanT > 0.5 ? 'CLEAR STANDARDS CREATE PURE SIGNAL' : '10,000 SYNTHETIC VARIATIONS OF STATIC'}
-        </text>
-      </svg>
+      <CameraRig durationInFrames={durationInFrames} keyframes={cameraKeyframes}>
+        <svg
+          width={VIDEO_CONFIG.width}
+          height={VIDEO_CONFIG.height}
+          viewBox={`0 0 ${VIDEO_CONFIG.width} ${VIDEO_CONFIG.height}`}
+        >
+          <line
+            x1="180"
+            y1={cy}
+            x2="1740"
+            y2={cy}
+            stroke="rgba(255,255,255,0.2)"
+            strokeWidth="2"
+            strokeDasharray="10 10"
+          />
+          <polyline
+            points={pts.join(' ')}
+            fill="none"
+            stroke={COLORS.white}
+            strokeWidth={3 + cleanT * 2.5}
+            filter="url(#soft-glow)"
+          />
+          <text
+            x="960"
+            y="845"
+            textAnchor="middle"
+            fill={COLORS.white}
+            fontFamily={FONT_FAMILY}
+            fontSize="21"
+            fontWeight="800"
+            letterSpacing="0.18em"
+          >
+            {cleanT > 0.5
+              ? 'CLEAR STANDARDS CREATE PURE SIGNAL'
+              : '10,000 SYNTHETIC VARIATIONS OF STATIC'}
+          </text>
+        </svg>
+      </CameraRig>
 
-      <PillBadge text="SIGNAL OVER NOISE" x={960} y={136} enterFrame={Math.round(fps * 0.7)} />
+      {/* HUD Layer */}
+      <PillBadge text="SIGNAL OVER NOISE" x={960} y={92} enterFrame={Math.round(fps * 0.45)} />
+
+      <RollingCounter
+        label="SIGNAL CLARITY"
+        value={clarityPct}
+        suffix="%"
+        x={1820}
+        y={158}
+        fontSize={116}
+        labelSize={19}
+        align="right"
+      />
+
+      <PunchlineCallout
+        text="PURE SIGNAL."
+        x={960}
+        y={945}
+        enterFrame={Math.round(durationInFrames * 0.65)}
+        exitFrame={durationInFrames - 8}
+        fontSize={62}
+      />
     </div>
   );
 };

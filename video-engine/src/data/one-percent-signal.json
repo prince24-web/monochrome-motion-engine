@@ -1,57 +1,57 @@
-{
-  "title": "The 1% Signal: How to Stand Out When AI Makes Everything Average",
-  "fps": 60,
-  "width": 1920,
-  "height": 1080,
-  "scenes": [
-    {
-      "id": "sig-01-conveyor",
-      "type": "clone-conveyor",
-      "durationSec": 12.94,
-      "narration": "When everyone on earth gets access to the exact same tools, average output drops to zero value. Every minute, an endless conveyor belt stamps out millions of identical grey clones."
-    },
-    {
-      "id": "sig-02-flood",
-      "type": "grey-cube-flood",
-      "durationSec": 11.21,
-      "narration": "We are entering an era of infinite supply. Generic essays, generic code, generic designs—when supply goes to infinity, the price of average collapses straight to zero."
-    },
-    {
-      "id": "sig-03-prism",
-      "type": "prism-filter",
-      "durationSec": 13.37,
-      "narration": "Yet abundance of noise creates an extreme shortage of signal. People are desperate for a filter that rejects ninety-nine percent of filler and isolates the rare one percent that actually matters."
-    },
-    {
-      "id": "sig-04-tuning-fork",
-      "type": "taste-tuning-fork",
-      "durationSec": 10.78,
-      "narration": "That filter is human taste. Knowing what to cut, what to emphasize, and what feels unmistakably real cannot be automated by pressing a single button."
-    },
-    {
-      "id": "sig-05-wave",
-      "type": "noise-to-signal-wave",
-      "durationSec": 10.35,
-      "narration": "Tools can generate ten thousand variations in seconds. Only a sharp mind with clear standards can tune jagged static into a clean, unforgettable signal."
-    },
-    {
-      "id": "sig-06-crystal",
-      "type": "faceted-crystal",
-      "durationSec": 11.65,
-      "narration": "In a world flooded with synthetic copies, a distinct point of view becomes a rare diamond. People do not follow perfection—they follow clarity, conviction, and original angles."
-    },
-    {
-      "id": "sig-07-signature",
-      "type": "human-signature",
-      "durationSec": 8.63,
-      "narration": "Your lived scars, your weird obsessions, your real-world experiments—those are the human signature that no generic template will ever replicate."
-    },
-    {
-      "id": "sig-08-finale",
-      "type": "rare-signal-finale",
-      "durationSec": 9.92,
-      "narration": "Do not compete with machines at being average. Use the tools for speed, sharpen your judgment—because when average becomes free, taste becomes priceless."
-    }
-  ],
-  "audioFile": "audio/one-percent-signal.wav"
+﻿{
+    "title":  "The 1% Signal: How to Stand Out When AI Makes Everything Average",
+    "fps":  60,
+    "width":  1920,
+    "height":  1080,
+    "scenes":  [
+                   {
+                       "id":  "sig-01-conveyor",
+                       "type":  "clone-conveyor",
+                       "durationSec":  10.65,
+                       "narration":  "When everyone on earth gets access to the exact same tools, average output drops to zero value. Every minute, an endless conveyor belt stamps out millions of identical grey clones."
+                   },
+                   {
+                       "id":  "sig-02-flood",
+                       "type":  "grey-cube-flood",
+                       "durationSec":  9.22,
+                       "narration":  "We are entering an era of infinite supply. Generic essays, generic code, generic designsâ€”when supply goes to infinity, the price of average collapses straight to zero."
+                   },
+                   {
+                       "id":  "sig-03-prism",
+                       "type":  "prism-filter",
+                       "durationSec":  11,
+                       "narration":  "Yet abundance of noise creates an extreme shortage of signal. People are desperate for a filter that rejects ninety-nine percent of filler and isolates the rare one percent that actually matters."
+                   },
+                   {
+                       "id":  "sig-04-tuning-fork",
+                       "type":  "taste-tuning-fork",
+                       "durationSec":  8.87,
+                       "narration":  "That filter is human taste. Knowing what to cut, what to emphasize, and what feels unmistakably real cannot be automated by pressing a single button."
+                   },
+                   {
+                       "id":  "sig-05-wave",
+                       "type":  "noise-to-signal-wave",
+                       "durationSec":  8.52,
+                       "narration":  "Tools can generate ten thousand variations in seconds. Only a sharp mind with clear standards can tune jagged static into a clean, unforgettable signal."
+                   },
+                   {
+                       "id":  "sig-06-crystal",
+                       "type":  "faceted-crystal",
+                       "durationSec":  9.59,
+                       "narration":  "In a world flooded with synthetic copies, a distinct point of view becomes a rare diamond. People do not follow perfectionâ€”they follow clarity, conviction, and original angles."
+                   },
+                   {
+                       "id":  "sig-07-signature",
+                       "type":  "human-signature",
+                       "durationSec":  7.1,
+                       "narration":  "Your lived scars, your weird obsessions, your real-world experimentsâ€”those are the human signature that no generic template will ever replicate."
+                   },
+                   {
+                       "id":  "sig-08-finale",
+                       "type":  "rare-signal-finale",
+                       "durationSec":  8.16,
+                       "narration":  "Do not compete with machines at being average. Use the tools for speed, sharpen your judgmentâ€”because when average becomes free, taste becomes priceless."
+                   }
+               ],
+    "audioFile":  "audio/one-percent-signal.wav"
 }

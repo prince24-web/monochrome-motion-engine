@@ -1,57 +1,57 @@
-{
-  "title": "The Sunk Cost Trap: Why You Keep Feeding Dead Projects",
-  "fps": 60,
-  "width": 1920,
-  "height": 1080,
-  "scenes": [
-    {
-      "id": "sc-01-sinking-ship",
-      "type": "sinking-ship",
-      "durationSec": 11.51,
-      "narration": "Your past effort is already gone—you can never get it back. The only real question is whether you will sacrifice your future just to justify what you already spent."
-    },
-    {
-      "id": "sc-02-coin-pour",
-      "type": "coin-pour",
-      "durationSec": 12.7,
-      "narration": "This is the sunk cost fallacy. Because you poured two years or ten thousand dollars into a leaking bucket, your brain convinces you to keep pouring even more into a dead project."
-    },
-    {
-      "id": "sc-03-anchor-chain",
-      "type": "anchor-chain",
-      "durationSec": 11.51,
-      "narration": "Instead of an investment, your past commitment turns into an iron anchor chained to your ankle—dragging down your energy, your calendar, and every new opportunity you could be building."
-    },
-    {
-      "id": "sc-04-ego-mirror",
-      "type": "ego-mirror",
-      "durationSec": 9.92,
-      "narration": "Most people do not stay because they believe in the project. They stay because walking away feels like admitting defeat, and ego hates looking wrong."
-    },
-    {
-      "id": "sc-05-zero-based",
-      "type": "zero-based-reset",
-      "durationSec": 11.9,
-      "narration": "Here is the simplest test to break the spell instantly. Ask yourself: knowing everything I know today, if I were not already in this, would I start it from scratch?"
-    },
-    {
-      "id": "sc-06-shears",
-      "type": "vector-shears",
-      "durationSec": 9.92,
-      "narration": "If the honest answer is no, cut the rope today. Not next quarter, not after one more try. Strategic quitting is not weakness—it is precision."
-    },
-    {
-      "id": "sc-07-buoyant-rise",
-      "type": "buoyant-rise",
-      "durationSec": 11.51,
-      "narration": "The exact second you drop dead weight, you feel an immediate surge of buoyancy. Your time returns, your mind clears, and your best work finally has room to rise."
-    },
-    {
-      "id": "sc-08-finale",
-      "type": "clean-slate-finale",
-      "durationSec": 8.32,
-      "narration": "Never stay loyal to a mistake just because you spent a long time making it. Honor your future—not your sunk costs."
-    }
-  ],
-  "audioFile": "audio/sunk-cost-trap.wav"
+﻿{
+    "title":  "The Sunk Cost Trap: Why You Keep Feeding Dead Projects",
+    "fps":  60,
+    "width":  1920,
+    "height":  1080,
+    "scenes":  [
+                   {
+                       "id":  "sc-01-sinking-ship",
+                       "type":  "sinking-ship",
+                       "durationSec":  8.9,
+                       "narration":  "Your past effort is already goneâ€”you can never get it back. The only real question is whether you will sacrifice your future just to justify what you already spent."
+                   },
+                   {
+                       "id":  "sc-02-coin-pour",
+                       "type":  "coin-pour",
+                       "durationSec":  9.82,
+                       "narration":  "This is the sunk cost fallacy. Because you poured two years or ten thousand dollars into a leaking bucket, your brain convinces you to keep pouring even more into a dead project."
+                   },
+                   {
+                       "id":  "sc-03-anchor-chain",
+                       "type":  "anchor-chain",
+                       "durationSec":  8.9,
+                       "narration":  "Instead of an investment, your past commitment turns into an iron anchor chained to your ankleâ€”dragging down your energy, your calendar, and every new opportunity you could be building."
+                   },
+                   {
+                       "id":  "sc-04-ego-mirror",
+                       "type":  "ego-mirror",
+                       "durationSec":  7.67,
+                       "narration":  "Most people do not stay because they believe in the project. They stay because walking away feels like admitting defeat, and ego hates looking wrong."
+                   },
+                   {
+                       "id":  "sc-05-zero-based",
+                       "type":  "zero-based-reset",
+                       "durationSec":  9.2,
+                       "narration":  "Here is the simplest test to break the spell instantly. Ask yourself: knowing everything I know today, if I were not already in this, would I start it from scratch?"
+                   },
+                   {
+                       "id":  "sc-06-shears",
+                       "type":  "vector-shears",
+                       "durationSec":  7.67,
+                       "narration":  "If the honest answer is no, cut the rope today. Not next quarter, not after one more try. Strategic quitting is not weaknessâ€”it is precision."
+                   },
+                   {
+                       "id":  "sc-07-buoyant-rise",
+                       "type":  "buoyant-rise",
+                       "durationSec":  8.9,
+                       "narration":  "The exact second you drop dead weight, you feel an immediate surge of buoyancy. Your time returns, your mind clears, and your best work finally has room to rise."
+                   },
+                   {
+                       "id":  "sc-08-finale",
+                       "type":  "clean-slate-finale",
+                       "durationSec":  6.45,
+                       "narration":  "Never stay loyal to a mistake just because you spent a long time making it. Honor your futureâ€”not your sunk costs."
+                   }
+               ],
+    "audioFile":  "audio/sunk-cost-trap.wav"
 }
