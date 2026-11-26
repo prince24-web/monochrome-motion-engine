@@ -1,10 +1,16 @@
 import React from 'react';
 import { Composition } from 'remotion';
 import {
+  AsymmetricComposition,
+  AsymmetricStoryboard,
+  getAsymmetricTotalFrames,
+} from './AsymmetricComposition';
+import {
   AttentionComposition,
   AttentionStoryboard,
   getAttentionTotalFrames,
 } from './AttentionComposition';
+import asymmetricBetRaw from './data/asymmetric-bet.json';
 import attentionTaxRaw from './data/attention-tax.json';
 import compoundingRepRaw from './data/compounding-reputation.json';
 import consistencyRaw from './data/consistency-beats-talent.json';
@@ -51,6 +57,7 @@ const hundredShotRule = hundredShotRaw as HundredShotStoryboard;
 const smartPeopleBroke = smartBrokeRaw as SmartBrokeStoryboard;
 const attentionTax = attentionTaxRaw as AttentionStoryboard;
 const compoundingReputation = compoundingRepRaw as ReputationStoryboard;
+const asymmetricBet = asymmetricBetRaw as AsymmetricStoryboard;
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -152,6 +159,17 @@ export const RemotionRoot: React.FC = () => {
         height={compoundingReputation.height}
         defaultProps={{
           storyboard: compoundingReputation,
+        }}
+      />
+      <Composition
+        id="AsymmetricBet"
+        component={AsymmetricComposition}
+        durationInFrames={getAsymmetricTotalFrames(asymmetricBet)}
+        fps={asymmetricBet.fps}
+        width={asymmetricBet.width}
+        height={asymmetricBet.height}
+        defaultProps={{
+          storyboard: asymmetricBet,
         }}
       />
     </>

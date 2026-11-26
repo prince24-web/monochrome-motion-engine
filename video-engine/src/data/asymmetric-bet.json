@@ -1,0 +1,57 @@
+{
+  "title": "The Asymmetric Bet: How to Win Without Ever Risking Ruin",
+  "fps": 60,
+  "width": 1920,
+  "height": 1080,
+  "scenes": [
+    {
+      "id": "ab-01-capped-floor",
+      "type": "capped-floor-open-sky",
+      "durationSec": 13.32,
+      "narration": "Most people think getting rich requires taking reckless gambles. In reality, the smartest builders do the exact opposite: they hunt for asymmetric bets where the downside is capped and the upside is infinite."
+    },
+    {
+      "id": "ab-02-weighted-coin",
+      "type": "weighted-coin-sim",
+      "durationSec": 12.92,
+      "narration": "Imagine a coin where tails costs you one dollar, but heads pays you twenty. You can lose ten times in a row and still walk away vastly richer after a single win."
+    },
+    {
+      "id": "ab-03-skewed-curve",
+      "type": "skewed-bell-curve",
+      "durationSec": 11.3,
+      "narration": "Ordinary jobs live inside a normal bell curve where outcomes are tightly bounded. Asymmetric opportunities live on a fat-tailed curve where one outlier event changes your entire decade."
+    },
+    {
+      "id": "ab-04-survival",
+      "type": "survival-barrier",
+      "durationSec": 12.51,
+      "narration": "Rule number one of asymmetry is simple: never risk ruin. As long as you protect your floor and stay in the game, you get unlimited tries to catch a life-changing wave."
+    },
+    {
+      "id": "ab-05-doors",
+      "type": "portfolio-doors",
+      "durationSec": 11.7,
+      "narration": "Think of your career as opening five low-cost doors. Four of them might lead to quiet lessons that cost almost nothing—and the fifth door opens into a blinding breakthrough."
+    },
+    {
+      "id": "ab-06-convex",
+      "type": "convex-curve",
+      "durationSec": 10.49,
+      "narration": "Fragile bets are concave: small predictable gains paired with catastrophic hidden risk. Smart bets are convex: tiny controlled losses paired with explosive upside when volatility hits."
+    },
+    {
+      "id": "ab-07-matrix",
+      "type": "risk-reward-matrix",
+      "durationSec": 9.69,
+      "narration": "Writing online, building software, launching small products, sending bold cold emails—all of them sit in the golden quadrant. Almost zero downside, and unlimited upside."
+    },
+    {
+      "id": "ab-08-finale",
+      "type": "asymmetric-finale",
+      "durationSec": 8.88,
+      "narration": "Stop taking fragile bets with capped rewards. Protect your floor, stack asymmetric shots, and let one win pay for a hundred tries."
+    }
+  ],
+  "audioFile": "audio/asymmetric-bet.wav"
+}
