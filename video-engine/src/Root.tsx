@@ -21,6 +21,7 @@ import hundredShotRaw from './data/hundred-shot-rule.json';
 import leverageTrapRaw from './data/leverage-trap.json';
 import openingDemoRaw from './data/opening-demo.json';
 import smartBrokeRaw from './data/smart-people-broke.json';
+import sunkCostRaw from './data/sunk-cost-trap.json';
 import visibilityRaw from './data/visibility-paradox.json';
 import {
   DopamineComposition,
@@ -42,6 +43,11 @@ import {
   SmartBrokeComposition,
   SmartBrokeStoryboard,
 } from './SmartBrokeComposition';
+import {
+  getSunkCostTotalFrames,
+  SunkCostComposition,
+  SunkCostStoryboard,
+} from './SunkCostComposition';
 import {
   getLeverageTotalFrames,
   LeverageComposition,
@@ -72,6 +78,7 @@ const compoundingReputation = compoundingRepRaw as ReputationStoryboard;
 const asymmetricBet = asymmetricBetRaw as AsymmetricStoryboard;
 const environmentWillpower = environmentRaw as EnvironmentStoryboard;
 const visibilityParadox = visibilityRaw as VisibilityStoryboard;
+const sunkCostTrap = sunkCostRaw as SunkCostStoryboard;
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -206,6 +213,17 @@ export const RemotionRoot: React.FC = () => {
         height={visibilityParadox.height}
         defaultProps={{
           storyboard: visibilityParadox,
+        }}
+      />
+      <Composition
+        id="SunkCostTrap"
+        component={SunkCostComposition}
+        durationInFrames={getSunkCostTotalFrames(sunkCostTrap)}
+        fps={sunkCostTrap.fps}
+        width={sunkCostTrap.width}
+        height={sunkCostTrap.height}
+        defaultProps={{
+          storyboard: sunkCostTrap,
         }}
       />
     </>
