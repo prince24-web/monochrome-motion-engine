@@ -6,16 +6,17 @@ on:
       composition:
         description: 'Remotion composition ID'
         required: true
-        default: 'ConsistencyBeatsTalent'
+        default: 'LeverageTrap'
         type: choice
         options:
+          - LeverageTrap
           - ConsistencyBeatsTalent
           - FullOnePercent
           - OpeningDemo
       output_name:
         description: 'Output MP4 filename'
         required: true
-        default: 'consistency-beats-talent.mp4'
+        default: 'leverage-trap.mp4'
         type: string
       crf:
         description: 'H.264 CRF quality (lower = higher quality, 16-20 recommended)'

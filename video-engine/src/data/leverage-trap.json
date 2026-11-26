@@ -1,0 +1,69 @@
+{
+  "title": "The Leverage Trap: Why Working Harder Keeps You Broke",
+  "fps": 60,
+  "width": 1920,
+  "height": 1080,
+  "scenes": [
+    {
+      "id": "lev-01-treadmill",
+      "type": "treadmill-clock",
+      "durationSec": 8.88,
+      "narration": "You can work sixteen hours a day for your entire life and still stay broke, because effort alone hits a hard ceiling."
+    },
+    {
+      "id": "lev-02-hourglass",
+      "type": "hourglass-drain",
+      "durationSec": 7.26,
+      "narration": "When you trade hours for dollars, every dollar costs a piece of your life you never get back."
+    },
+    {
+      "id": "lev-03-split-fork",
+      "type": "split-path-fork",
+      "durationSec": 7.26,
+      "narration": "That is why the wealthy are not working harder than you. They are playing a completely different game."
+    },
+    {
+      "id": "lev-04-fulcrum",
+      "type": "fulcrum-lever",
+      "durationSec": 5.85,
+      "narration": "The game is leverage: disconnecting how hard you work from how much you produce."
+    },
+    {
+      "id": "lev-05-four-pillars",
+      "type": "four-pillars",
+      "durationSec": 7.11,
+      "narration": "Historically, leverage meant labor or capital, both requiring someone else's permission. Today, code and media require none."
+    },
+    {
+      "id": "lev-06-broadcast",
+      "type": "broadcast-ripple",
+      "durationSec": 9.62,
+      "narration": "Write a line of code or record one video, and it reaches a million people for the exact same effort as reaching one."
+    },
+    {
+      "id": "lev-07-sleep-factory",
+      "type": "sleep-clock-factory",
+      "durationSec": 7.53,
+      "narration": "For the first time in history, your systems can work twenty-four hours a day, even while you sleep."
+    },
+    {
+      "id": "lev-08-dominoes",
+      "type": "domino-chain",
+      "durationSec": 8.55,
+      "narration": "Small leveraged actions do not just add up. They trigger cascades where every piece knocks over something twice its size."
+    },
+    {
+      "id": "lev-09-escape-velocity",
+      "type": "escape-velocity",
+      "durationSec": 5.54,
+      "narration": "Hard work gives you a linear slope. Leverage gives you escape velocity."
+    },
+    {
+      "id": "lev-10-horizon",
+      "type": "horizon-architect",
+      "durationSec": 5.07,
+      "narration": "Stop renting out your hours. Build something that works without you."
+    }
+  ],
+  "audioFile": "audio/leverage-trap.wav"
+}
