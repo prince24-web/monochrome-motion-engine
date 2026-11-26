@@ -1,57 +1,57 @@
-{
-  "title": "The Attention Tax: How 5-Second Distractions Cost You 23 Minutes",
-  "fps": 60,
-  "width": 1920,
-  "height": 1080,
-  "scenes": [
-    {
-      "id": "at-01-diving-bell",
-      "type": "diving-bell",
-      "durationSec": 13.64,
-      "narration": "Deep focus works like diving into the ocean. You do not start at the bottom—it takes fifteen to twenty minutes of quiet descent just to sink past surface noise into true flow."
-    },
-    {
-      "id": "at-02-ping-harpoon",
-      "type": "ping-harpoon",
-      "durationSec": 11.51,
-      "narration": "And yet, one tiny five-second notification ping on your screen acts like a winch cable that yanks your brain violently all the way back to the surface."
-    },
-    {
-      "id": "at-03-recovery-clock",
-      "type": "recovery-clock",
-      "durationSec": 11.94,
-      "narration": "Research shows it takes an average of twenty-three minutes to fully regain deep concentration after a single interruption. Checking your phone for five seconds never costs five seconds."
-    },
-    {
-      "id": "at-04-shattered-lens",
-      "type": "shattered-lens",
-      "durationSec": 11.51,
-      "narration": "Undivided attention is like sunlight focused through a lens—strong enough to burn through the hardest problems. Fragmented attention scatters that exact same energy into harmless dim rays."
-    },
-    {
-      "id": "at-05-fragmented-grid",
-      "type": "fragmented-grid",
-      "durationSec": 13.22,
-      "narration": "Most people spend eight hours at a desk sliced into forty tiny interrupted slivers, wondering why they feel exhausted with nothing meaningful finished. Two unbroken ninety-minute blocks beat eight scattered hours."
-    },
-    {
-      "id": "at-06-context-switch",
-      "type": "context-switch-meter",
-      "durationSec": 11.08,
-      "narration": "Every time you bounce between tabs, messages, and tasks, your brain pays an invisible switching tax—leaving residue behind until over half your cognitive bandwidth is gone."
-    },
-    {
-      "id": "at-07-ocean-vault",
-      "type": "deep-ocean-vault",
-      "durationSec": 12.36,
-      "narration": "The highest performers do not have stronger willpower against distractions. They flip airplane mode on, lock the hatch, and build an environment where pings cannot reach them at all."
-    },
-    {
-      "id": "at-08-unbroken-finale",
-      "type": "unbroken-focus-finale",
-      "durationSec": 10.23,
-      "narration": "In an economy engineered to shatter your concentration, unbroken focus is no longer a nice habit. Protect your depth—it is your greatest unfair advantage."
-    }
-  ],
-  "audioFile": "audio/attention-tax.wav"
+﻿{
+    "title":  "The Attention Tax: How 5-Second Distractions Cost You 23 Minutes",
+    "fps":  60,
+    "width":  1920,
+    "height":  1080,
+    "scenes":  [
+                   {
+                       "id":  "at-01-diving-bell",
+                       "type":  "diving-bell",
+                       "durationSec":  11.26,
+                       "narration":  "Deep focus works like diving into the ocean. You do not start at the bottomâ€”it takes fifteen to twenty minutes of quiet descent just to sink past surface noise into true flow."
+                   },
+                   {
+                       "id":  "at-02-ping-harpoon",
+                       "type":  "ping-harpoon",
+                       "durationSec":  9.5,
+                       "narration":  "And yet, one tiny five-second notification ping on your screen acts like a winch cable that yanks your brain violently all the way back to the surface."
+                   },
+                   {
+                       "id":  "at-03-recovery-clock",
+                       "type":  "recovery-clock",
+                       "durationSec":  9.86,
+                       "narration":  "Research shows it takes an average of twenty-three minutes to fully regain deep concentration after a single interruption. Checking your phone for five seconds never costs five seconds."
+                   },
+                   {
+                       "id":  "at-04-shattered-lens",
+                       "type":  "shattered-lens",
+                       "durationSec":  9.5,
+                       "narration":  "Undivided attention is like sunlight focused through a lensâ€”strong enough to burn through the hardest problems. Fragmented attention scatters that exact same energy into harmless dim rays."
+                   },
+                   {
+                       "id":  "at-05-fragmented-grid",
+                       "type":  "fragmented-grid",
+                       "durationSec":  10.92,
+                       "narration":  "Most people spend eight hours at a desk sliced into forty tiny interrupted slivers, wondering why they feel exhausted with nothing meaningful finished. Two unbroken ninety-minute blocks beat eight scattered hours."
+                   },
+                   {
+                       "id":  "at-06-context-switch",
+                       "type":  "context-switch-meter",
+                       "durationSec":  9.15,
+                       "narration":  "Every time you bounce between tabs, messages, and tasks, your brain pays an invisible switching taxâ€”leaving residue behind until over half your cognitive bandwidth is gone."
+                   },
+                   {
+                       "id":  "at-07-ocean-vault",
+                       "type":  "deep-ocean-vault",
+                       "durationSec":  10.21,
+                       "narration":  "The highest performers do not have stronger willpower against distractions. They flip airplane mode on, lock the hatch, and build an environment where pings cannot reach them at all."
+                   },
+                   {
+                       "id":  "at-08-unbroken-finale",
+                       "type":  "unbroken-focus-finale",
+                       "durationSec":  8.45,
+                       "narration":  "In an economy engineered to shatter your concentration, unbroken focus is no longer a nice habit. Protect your depthâ€”it is your greatest unfair advantage."
+                   }
+               ],
+    "audioFile":  "audio/attention-tax.wav"
 }

@@ -1,57 +1,57 @@
-{
-  "title": "The 100-Shot Rule: Why Beginners Quit Right Before It Works",
-  "fps": 60,
-  "width": 1920,
-  "height": 1080,
-  "scenes": [
-    {
-      "id": "hs-01-target-range",
-      "type": "target-range",
-      "durationSec": 11.1,
-      "narration": "Most people do not fail because they lack talent. They fail because they judge their entire future on their first five clumsy attempts. Every master started by missing wildly."
-    },
-    {
-      "id": "hs-02-attempt-seven",
-      "type": "attempt-seven-wall",
-      "durationSec": 12.25,
-      "narration": "Look at almost any skill, business, or creative craft. Over ninety percent of beginners hit an invisible wall right around attempt number seven, conclude it is not for them, and walk away."
-    },
-    {
-      "id": "hs-03-scatter-cluster",
-      "type": "scatter-to-cluster",
-      "durationSec": 10.71,
-      "narration": "Your first twenty shots are supposed to look like scattered noise. You are not failing—you are gathering the raw data required to tighten your aim into a cluster."
-    },
-    {
-      "id": "hs-04-roots",
-      "type": "underground-roots",
-      "durationSec": 11.86,
-      "narration": "Just like bamboo growing underground, almost all real progress happens beneath the surface where nobody can applaud it. You build ninety percent of the roots before a single sprout breaks ground."
-    },
-    {
-      "id": "hs-05-calibration",
-      "type": "calibration-dial",
-      "durationSec": 9.95,
-      "narration": "Every missed shot is a calibration signal. Shot ten corrects your angle. Shot thirty corrects your timing. By shot sixty, your error margin shrinks toward zero."
-    },
-    {
-      "id": "hs-06-iceberg",
-      "type": "iceberg-momentum",
-      "durationSec": 9.95,
-      "narration": "When the world finally calls someone an overnight success, they are only seeing the tip above the waterline—never the ninety-nine imperfect reps holding it up underneath."
-    },
-    {
-      "id": "hs-07-reticle",
-      "type": "precision-reticle",
-      "durationSec": 9.57,
-      "narration": "Once you cross shot seventy, something strange happens. What used to feel impossible locks into muscle memory, and hitting the bull's-eye becomes your new baseline."
-    },
-    {
-      "id": "hs-08-summit",
-      "type": "mastery-summit",
-      "durationSec": 9.18,
-      "narration": "So make yourself one simple promise before you begin anything hard. Do not even evaluate the results until you have taken one hundred shots."
-    }
-  ],
-  "audioFile": "audio/hundred-shot-rule.wav"
+﻿{
+    "title":  "The 100-Shot Rule: Why Beginners Quit Right Before It Works",
+    "fps":  60,
+    "width":  1920,
+    "height":  1080,
+    "scenes":  [
+                   {
+                       "id":  "hs-01-target-range",
+                       "type":  "target-range",
+                       "durationSec":  8.84,
+                       "narration":  "Most people do not fail because they lack talent. They fail because they judge their entire future on their first five clumsy attempts. Every master started by missing wildly."
+                   },
+                   {
+                       "id":  "hs-02-attempt-seven",
+                       "type":  "attempt-seven-wall",
+                       "durationSec":  9.75,
+                       "narration":  "Look at almost any skill, business, or creative craft. Over ninety percent of beginners hit an invisible wall right around attempt number seven, conclude it is not for them, and walk away."
+                   },
+                   {
+                       "id":  "hs-03-scatter-cluster",
+                       "type":  "scatter-to-cluster",
+                       "durationSec":  8.53,
+                       "narration":  "Your first twenty shots are supposed to look like scattered noise. You are not failingâ€”you are gathering the raw data required to tighten your aim into a cluster."
+                   },
+                   {
+                       "id":  "hs-04-roots",
+                       "type":  "underground-roots",
+                       "durationSec":  9.44,
+                       "narration":  "Just like bamboo growing underground, almost all real progress happens beneath the surface where nobody can applaud it. You build ninety percent of the roots before a single sprout breaks ground."
+                   },
+                   {
+                       "id":  "hs-05-calibration",
+                       "type":  "calibration-dial",
+                       "durationSec":  7.92,
+                       "narration":  "Every missed shot is a calibration signal. Shot ten corrects your angle. Shot thirty corrects your timing. By shot sixty, your error margin shrinks toward zero."
+                   },
+                   {
+                       "id":  "hs-06-iceberg",
+                       "type":  "iceberg-momentum",
+                       "durationSec":  7.92,
+                       "narration":  "When the world finally calls someone an overnight success, they are only seeing the tip above the waterlineâ€”never the ninety-nine imperfect reps holding it up underneath."
+                   },
+                   {
+                       "id":  "hs-07-reticle",
+                       "type":  "precision-reticle",
+                       "durationSec":  7.62,
+                       "narration":  "Once you cross shot seventy, something strange happens. What used to feel impossible locks into muscle memory, and hitting the bull\u0027s-eye becomes your new baseline."
+                   },
+                   {
+                       "id":  "hs-08-summit",
+                       "type":  "mastery-summit",
+                       "durationSec":  7.32,
+                       "narration":  "So make yourself one simple promise before you begin anything hard. Do not even evaluate the results until you have taken one hundred shots."
+                   }
+               ],
+    "audioFile":  "audio/hundred-shot-rule.wav"
 }

@@ -1,57 +1,57 @@
-{
-  "title": "Why Smart People Stay Broke (The Overthinking Loop)",
-  "fps": 60,
-  "width": 1920,
-  "height": 1080,
-  "scenes": [
-    {
-      "id": "sb-01-labyrinth",
-      "type": "infinite-labyrinth",
-      "durationSec": 10.85,
-      "narration": "High intelligence can quietly become a financial trap. Because the smarter you are, the better your brain becomes at inventing sophisticated reasons not to start."
-    },
-    {
-      "id": "sb-02-blueprints",
-      "type": "blueprint-tower",
-      "durationSec": 12.58,
-      "narration": "Smart people fall in love with planning. They build fourteen versions of a strategy deck, study every edge case, and feel productive—while their actual revenue stays locked at zero."
-    },
-    {
-      "id": "sb-03-loop",
-      "type": "perfectionist-loop",
-      "durationSec": 11.71,
-      "narration": "They get trapped inside the perfectionist loop: research, plan, tweak, doubt, and research again. Motion feels like progress, even when you are running in a closed circle."
-    },
-    {
-      "id": "sb-04-v01",
-      "type": "version-zero-ship",
-      "durationSec": 12.58,
-      "narration": "Meanwhile, someone half as credentialed ships an ugly version zero point one on day one. It is imperfect, it is rough, and yet it immediately starts collecting real-world momentum."
-    },
-    {
-      "id": "sb-05-radar",
-      "type": "feedback-radar",
-      "durationSec": 14.75,
-      "narration": "Because the market never rewards invisible ideas inside your head. The moment you ship, real feedback hits your radar and tells you in one week what thinking could never teach you in a year."
-    },
-    {
-      "id": "sb-06-cage",
-      "type": "paralysis-cage",
-      "durationSec": 11.71,
-      "narration": "Analysis paralysis feels like a locked cage made of what-ifs and fear of judgment. Until you realize the bars were never locked from the outside—only from within."
-    },
-    {
-      "id": "sb-07-spiral",
-      "type": "iteration-spiral",
-      "durationSec": 11.28,
-      "narration": "Real winners do not think their way to perfection. They spiral upward through fast iterations: ship, listen, improve, and repeat ten times faster than the overthinkers."
-    },
-    {
-      "id": "sb-08-finale",
-      "type": "action-wins-finale",
-      "durationSec": 7.39,
-      "narration": "Stop waiting to feel ready. Clarity never arrives before you begin—clarity is the reward for taking action."
-    }
-  ],
-  "audioFile": "audio/smart-people-broke.wav"
+﻿{
+    "title":  "Why Smart People Stay Broke (The Overthinking Loop)",
+    "fps":  60,
+    "width":  1920,
+    "height":  1080,
+    "scenes":  [
+                   {
+                       "id":  "sb-01-labyrinth",
+                       "type":  "infinite-labyrinth",
+                       "durationSec":  8.39,
+                       "narration":  "High intelligence can quietly become a financial trap. Because the smarter you are, the better your brain becomes at inventing sophisticated reasons not to start."
+                   },
+                   {
+                       "id":  "sb-02-blueprints",
+                       "type":  "blueprint-tower",
+                       "durationSec":  9.73,
+                       "narration":  "Smart people fall in love with planning. They build fourteen versions of a strategy deck, study every edge case, and feel productiveâ€”while their actual revenue stays locked at zero."
+                   },
+                   {
+                       "id":  "sb-03-loop",
+                       "type":  "perfectionist-loop",
+                       "durationSec":  9.06,
+                       "narration":  "They get trapped inside the perfectionist loop: research, plan, tweak, doubt, and research again. Motion feels like progress, even when you are running in a closed circle."
+                   },
+                   {
+                       "id":  "sb-04-v01",
+                       "type":  "version-zero-ship",
+                       "durationSec":  9.73,
+                       "narration":  "Meanwhile, someone half as credentialed ships an ugly version zero point one on day one. It is imperfect, it is rough, and yet it immediately starts collecting real-world momentum."
+                   },
+                   {
+                       "id":  "sb-05-radar",
+                       "type":  "feedback-radar",
+                       "durationSec":  11.41,
+                       "narration":  "Because the market never rewards invisible ideas inside your head. The moment you ship, real feedback hits your radar and tells you in one week what thinking could never teach you in a year."
+                   },
+                   {
+                       "id":  "sb-06-cage",
+                       "type":  "paralysis-cage",
+                       "durationSec":  9.06,
+                       "narration":  "Analysis paralysis feels like a locked cage made of what-ifs and fear of judgment. Until you realize the bars were never locked from the outsideâ€”only from within."
+                   },
+                   {
+                       "id":  "sb-07-spiral",
+                       "type":  "iteration-spiral",
+                       "durationSec":  8.72,
+                       "narration":  "Real winners do not think their way to perfection. They spiral upward through fast iterations: ship, listen, improve, and repeat ten times faster than the overthinkers."
+                   },
+                   {
+                       "id":  "sb-08-finale",
+                       "type":  "action-wins-finale",
+                       "durationSec":  5.71,
+                       "narration":  "Stop waiting to feel ready. Clarity never arrives before you beginâ€”clarity is the reward for taking action."
+                   }
+               ],
+    "audioFile":  "audio/smart-people-broke.wav"
 }

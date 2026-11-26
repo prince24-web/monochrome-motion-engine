@@ -1,6 +1,8 @@
 import React from 'react';
 import { useCurrentFrame, useVideoConfig } from 'remotion';
+import { CameraKeyframe, CameraRig } from '../../components/CameraRig';
 import { PillBadge } from '../../components/PillBadge';
+import { PunchlineCallout } from '../../components/PunchlineCallout';
 import { RollingCounter } from '../../components/RollingCounter';
 import { clampedInterpolate, EASING } from '../../theme/easing';
 import { COLORS, FONT_FAMILY, VIDEO_CONFIG } from '../../theme/tokens';
@@ -24,60 +26,119 @@ export const ContextSwitchMeterScene: React.FC<Props> = ({ durationInFrames }) =
 
   // Rapid alternating toggle between TASK A and TASK B every 22 frames
   const activeTask = Math.floor(frame / 22) % 2;
-  const drainT = clampedInterpolate(frame, [10, durationInFrames - 18], [0, 1], EASING.smoothInOut);
+  const drainT = clampedInterpolate(frame, [6, durationInFrames - 12], [0, 1], EASING.smoothInOut);
   const bandwidth = 100 - drainT * 58;
+
+  // Camera: dart between Task A and Task B -> drop down to draining bandwidth bar -> wide pull-back
+  const cameraKeyframes: CameraKeyframe[] = [
+    { t: 0.0, scale: 1.42, x: -340, y: -95 },
+    { t: 0.34, scale: 1.42, x: 340, y: -95 },
+    { t: 0.68, scale: 1.32, x: 0, y: 175 },
+    { t: 0.9, scale: 1.0, x: 0, y: 0 },
+    { t: 1.0, scale: 1.0, x: 0, y: 0 },
+  ];
 
   return (
     <div style={{ position: 'absolute', inset: 0, opacity: sceneOpacity }}>
-      <svg
-        width={VIDEO_CONFIG.width}
-        height={VIDEO_CONFIG.height}
-        viewBox={`0 0 ${VIDEO_CONFIG.width} ${VIDEO_CONFIG.height}`}
-      >
-        {/* Alternating Task Nodes */}
-        {[
-          { label: 'TASK A', x: 520, active: activeTask === 0 },
-          { label: 'TASK B', x: 1400, active: activeTask === 1 },
-        ].map((t) => (
-          <g key={t.label} transform={`translate(${t.x}, 430)`} opacity={t.active ? 1 : 0.32}>
-            <rect
-              x="-145"
-              y="-64"
-              width="290"
-              height="128"
-              rx="20"
-              fill="#0B0B10"
-              stroke={t.active ? COLORS.white : COLORS.dimGrey}
-              strokeWidth={t.active ? 4 : 2.5}
-              filter={t.active ? 'url(#soft-glow)' : undefined}
-            />
-            <text x="0" y="12" textAnchor="middle" fill={COLORS.white} fontFamily={FONT_FAMILY} fontSize="34" fontWeight="800" letterSpacing="0.14em">
-              {t.label}
-            </text>
-          </g>
-        ))}
+      <CameraRig durationInFrames={durationInFrames} keyframes={cameraKeyframes}>
+        <svg
+          width={VIDEO_CONFIG.width}
+          height={VIDEO_CONFIG.height}
+          viewBox={`0 0 ${VIDEO_CONFIG.width} ${VIDEO_CONFIG.height}`}
+        >
+          {/* Alternating Task Nodes */}
+          {[
+            { label: 'TASK A', x: 520, active: activeTask === 0 },
+            { label: 'TASK B', x: 1400, active: activeTask === 1 },
+          ].map((t) => (
+            <g key={t.label} transform={`translate(${t.x}, 430)`} opacity={t.active ? 1 : 0.32}>
+              <rect
+                x="-145"
+                y="-64"
+                width="290"
+                height="128"
+                rx="20"
+                fill="#0B0B10"
+                stroke={t.active ? COLORS.white : COLORS.dimGrey}
+                strokeWidth={t.active ? 4 : 2.5}
+                filter={t.active ? 'url(#soft-glow)' : undefined}
+              />
+              <text
+                x="0"
+                y="12"
+                textAnchor="middle"
+                fill={COLORS.white}
+                fontFamily={FONT_FAMILY}
+                fontSize="34"
+                fontWeight="800"
+                letterSpacing="0.14em"
+              >
+                {t.label}
+              </text>
+            </g>
+          ))}
 
-        {/* Sparking Switch Arc */}
-        <line x1="680" y1="430" x2="1240" y2="430" stroke={COLORS.white} strokeWidth="3.5" strokeDasharray="12 12" strokeDashoffset={activeTask === 0 ? frame * 8 : -frame * 8} />
+          {/* Sparking Switch Arc */}
+          <line
+            x1="680"
+            y1="430"
+            x2="1240"
+            y2="430"
+            stroke={COLORS.white}
+            strokeWidth="3.5"
+            strokeDasharray="12 12"
+            strokeDashoffset={activeTask === 0 ? frame * 8 : -frame * 8}
+          />
 
-        {/* Draining Cognitive Bandwidth Bar */}
-        <text x="960" y="695" textAnchor="middle" fill={COLORS.midGrey} fontFamily={FONT_FAMILY} fontSize="20" fontWeight="700" letterSpacing="0.18em">
-          USABLE COGNITIVE BANDWIDTH
-        </text>
-        <rect x="460" y="725" width="1000" height="44" rx="22" fill={COLORS.darkGrey} />
-        <rect
-          x="460"
-          y="725"
-          width={1000 * (bandwidth / 100)}
-          height="44"
-          rx="22"
-          fill={COLORS.white}
-          filter="url(#soft-glow)"
-        />
-      </svg>
+          {/* Draining Cognitive Bandwidth Bar */}
+          <text
+            x="960"
+            y="695"
+            textAnchor="middle"
+            fill={COLORS.midGrey}
+            fontFamily={FONT_FAMILY}
+            fontSize="20"
+            fontWeight="700"
+            letterSpacing="0.18em"
+          >
+            USABLE COGNITIVE BANDWIDTH
+          </text>
+          <rect x="460" y="725" width="1000" height="44" rx="22" fill={COLORS.darkGrey} />
+          <rect
+            x="460"
+            y="725"
+            width={1000 * (bandwidth / 100)}
+            height="44"
+            rx="22"
+            fill={COLORS.white}
+            filter="url(#soft-glow)"
+          />
+        </svg>
+      </CameraRig>
 
-      <RollingCounter label="BANDWIDTH LEFT" value={bandwidth} suffix="%" x={960} y={860} fontSize={74} labelSize={18} />
-      <PillBadge text="THE SWITCHING TAX" x={960} y={136} enterFrame={Math.round(fps * 0.7)} />
+      {/* HUD Layer */}
+      <PillBadge text="THE SWITCHING TAX" x={960} y={96} enterFrame={Math.round(fps * 0.45)} />
+
+      <RollingCounter
+        label="BANDWIDTH LEFT"
+        value={bandwidth}
+        suffix="%"
+        x={1820}
+        y={158}
+        fontSize={118}
+        labelSize={20}
+        align="right"
+      />
+
+      <PunchlineCallout
+        text="MULTITASKING DRAINS."
+        subtext="EVERY SWITCH BURNS REAL BANDWIDTH"
+        x={960}
+        y={945}
+        enterFrame={Math.round(durationInFrames * 0.65)}
+        exitFrame={durationInFrames - 8}
+        fontSize={60}
+      />
     </div>
   );
 };

@@ -46,7 +46,7 @@ $filter = @(
 Write-Host "Running FFmpeg cadence + brightness pass..."
 $prevEap = $ErrorActionPreference
 $ErrorActionPreference = "Continue"
-& ffmpeg -y -loglevel error -i $BackupPath -af $filter -ar 44100 -ac 1 -c:a pcm_s16le $TempOut
+& ffmpeg -y -loglevel error -i $BackupPath -af $filter -ar 24000 -ac 1 -c:a pcm_s16le $TempOut
 $ffExit = $LASTEXITCODE
 $ErrorActionPreference = $prevEap
 if ($ffExit -ne 0) {

@@ -1,7 +1,11 @@
 import React from 'react';
 import { useCurrentFrame, useVideoConfig } from 'remotion';
+import { CameraKeyframe, CameraRig } from '../../components/CameraRig';
 import { PawnCharacter } from '../../components/PawnCharacter';
 import { PillBadge } from '../../components/PillBadge';
+import { PunchlineCallout } from '../../components/PunchlineCallout';
+import { RollingCounter } from '../../components/RollingCounter';
+import { SpotlightCone } from '../../components/SpotlightCone';
 import { clampedInterpolate, EASING } from '../../theme/easing';
 import { COLORS, FONT_FAMILY, VIDEO_CONFIG } from '../../theme/tokens';
 
@@ -27,101 +31,166 @@ export const AttemptSevenWallScene: React.FC<Props> = ({ durationInFrames }) => 
   const rightX = 1740;
   const wallX = 520; // Attempt #7 early along the 1..100 journey
 
-  const walkT = clampedInterpolate(frame, [10, Math.round(durationInFrames * 0.52)], [0, 1], EASING.expoOut);
+  const walkT = clampedInterpolate(frame, [6, durationInFrames - 12], [0, 1], EASING.smoothInOut);
   const heroX = leftX + 40 + walkT * (wallX - leftX - 115);
+  const wallHeight = clampedInterpolate(frame, [8, Math.round(durationInFrames * 0.55)], [0, 440], EASING.smoothInOut);
+  const quitPct = Math.round(clampedInterpolate(frame, [12, durationInFrames - 14], [0, 92], EASING.smoothInOut));
 
-  const wallHeight = clampedInterpolate(frame, [16, Math.round(fps * 1.4)], [0, 440], EASING.expoOut);
+  // Camera: track protagonist walking to the wall -> crane up the wall -> pan across unseen 8–100 horizon -> wide pull-back
+  const cameraKeyframes: CameraKeyframe[] = [
+    { t: 0.0, scale: 1.46, x: -560, y: 120 },
+    { t: 0.36, scale: 1.38, x: -420, y: -30 },
+    { t: 0.68, scale: 1.24, x: 240, y: 10 },
+    { t: 0.9, scale: 1.0, x: 0, y: 0 },
+    { t: 1.0, scale: 1.0, x: 0, y: 0 },
+  ];
 
   return (
     <div style={{ position: 'absolute', inset: 0, opacity: sceneOpacity }}>
-      <svg
-        width={VIDEO_CONFIG.width}
-        height={VIDEO_CONFIG.height}
-        viewBox={`0 0 ${VIDEO_CONFIG.width} ${VIDEO_CONFIG.height}`}
-      >
-        {/* Horizontal 1..100 Track */}
-        <line x1={leftX} y1={trackY} x2={rightX} y2={trackY} stroke="rgba(255,255,255,0.34)" strokeWidth="3" strokeDasharray="10 12" />
-
-        {/* Milestone Markers */}
-        {[
-          { label: 'SHOT 1', x: leftX + 20 },
-          { label: 'SHOT 7', x: wallX },
-          { label: 'SHOT 50', x: 1120 },
-          { label: 'SHOT 100', x: rightX - 40 },
-        ].map((m) => (
-          <g key={m.label}>
-            <line x1={m.x} y1={trackY - 12} x2={m.x} y2={trackY + 12} stroke={COLORS.softWhite} strokeWidth="2.5" />
-            <text
-              x={m.x}
-              y={trackY + 48}
-              textAnchor="middle"
-              fill={m.label === 'SHOT 7' ? COLORS.white : COLORS.midGrey}
-              fontFamily={FONT_FAMILY}
-              fontSize="20"
-              fontWeight="700"
-              letterSpacing="0.16em"
-            >
-              {m.label}
-            </text>
-          </g>
-        ))}
-
-        {/* Massive Vertical Glowing QUIT WALL at Shot #7 */}
-        <g filter="url(#soft-glow)">
-          <rect
-            x={wallX - 16}
-            y={trackY - wallHeight}
-            width="32"
-            height={wallHeight}
-            rx="6"
-            fill="#101016"
-            stroke={COLORS.white}
-            strokeWidth="3.5"
+      <CameraRig durationInFrames={durationInFrames} keyframes={cameraKeyframes}>
+        <svg
+          width={VIDEO_CONFIG.width}
+          height={VIDEO_CONFIG.height}
+          viewBox={`0 0 ${VIDEO_CONFIG.width} ${VIDEO_CONFIG.height}`}
+        >
+          {/* Volumetric spotlight tracking protagonist */}
+          <SpotlightCone
+            topX={heroX}
+            topWidth={90}
+            bottomX={heroX}
+            bottomY={trackY + 30}
+            bottomWidth={280}
+            opacity={0.75}
           />
-        </g>
-        <text
-          x={wallX}
-          y={trackY - wallHeight - 24}
-          textAnchor="middle"
-          fill={COLORS.white}
-          fontFamily={FONT_FAMILY}
-          fontSize="22"
-          fontWeight="800"
-          letterSpacing="0.18em"
-        >
-          92% QUIT HERE
-        </text>
 
-        {/* Unexplored Glowing Horizon Beyond the Wall */}
-        <rect
-          x={wallX + 40}
-          y={360}
-          width={rightX - wallX - 60}
-          height={340}
-          rx="18"
-          fill="rgba(255,255,255,0.03)"
-          stroke="rgba(255,255,255,0.18)"
-          strokeWidth="2"
-          strokeDasharray="10 12"
-        />
-        <text
-          x={(wallX + 40 + rightX) / 2}
-          y={535}
-          textAnchor="middle"
-          fill={COLORS.softWhite}
-          fontFamily={FONT_FAMILY}
-          fontSize="30"
-          fontWeight="800"
-          letterSpacing="0.18em"
-        >
-          SHOTS 8 – 100 (NEVER SEEN)
-        </text>
+          {/* Horizontal 1..100 Track */}
+          <line
+            x1={leftX}
+            y1={trackY}
+            x2={rightX}
+            y2={trackY}
+            stroke="rgba(255,255,255,0.34)"
+            strokeWidth="3"
+            strokeDasharray="10 12"
+          />
 
-        {/* Protagonist stopped in front of Shot 7 wall */}
-        <PawnCharacter x={heroX} y={trackY} scale={0.95} glowIntensity={0.55} />
-      </svg>
+          {/* Milestone Markers */}
+          {[
+            { label: 'SHOT 1', x: leftX + 20 },
+            { label: 'SHOT 7', x: wallX },
+            { label: 'SHOT 50', x: 1120 },
+            { label: 'SHOT 100', x: rightX - 40 },
+          ].map((m) => (
+            <g key={m.label}>
+              <line
+                x1={m.x}
+                y1={trackY - 12}
+                x2={m.x}
+                y2={trackY + 12}
+                stroke={COLORS.softWhite}
+                strokeWidth="2.5"
+              />
+              <text
+                x={m.x}
+                y={trackY + 48}
+                textAnchor="middle"
+                fill={m.label === 'SHOT 7' ? COLORS.white : COLORS.midGrey}
+                fontFamily={FONT_FAMILY}
+                fontSize="20"
+                fontWeight="700"
+                letterSpacing="0.16em"
+              >
+                {m.label}
+              </text>
+            </g>
+          ))}
 
-      <PillBadge text="THE ATTEMPT #7 WALL" x={960} y={136} enterFrame={Math.round(fps * 0.8)} />
+          {/* Massive Vertical Glowing QUIT WALL at Shot #7 */}
+          <g filter="url(#soft-glow)">
+            <rect
+              x={wallX - 16}
+              y={trackY - wallHeight}
+              width="32"
+              height={wallHeight}
+              rx="6"
+              fill="#101016"
+              stroke={COLORS.white}
+              strokeWidth="3.5"
+            />
+          </g>
+          <text
+            x={wallX}
+            y={trackY - wallHeight - 24}
+            textAnchor="middle"
+            fill={COLORS.white}
+            fontFamily={FONT_FAMILY}
+            fontSize="22"
+            fontWeight="800"
+            letterSpacing="0.18em"
+          >
+            92% QUIT HERE
+          </text>
+
+          {/* Unexplored Glowing Horizon Beyond the Wall */}
+          <rect
+            x={wallX + 40}
+            y={360}
+            width={rightX - wallX - 60}
+            height={340}
+            rx="18"
+            fill="rgba(255,255,255,0.03)"
+            stroke="rgba(255,255,255,0.18)"
+            strokeWidth="2"
+            strokeDasharray="10 12"
+          />
+          <text
+            x={(wallX + 40 + rightX) / 2}
+            y={535}
+            textAnchor="middle"
+            fill={COLORS.softWhite}
+            fontFamily={FONT_FAMILY}
+            fontSize="30"
+            fontWeight="800"
+            letterSpacing="0.18em"
+          >
+            SHOTS 8 – 100 (NEVER SEEN)
+          </text>
+
+          {/* Protagonist stopped in front of Shot 7 wall */}
+          <PawnCharacter
+            x={heroX}
+            y={trackY}
+            scale={0.95}
+            glowIntensity={0.62}
+            showFloorHalo
+            haloProgress={0.85}
+          />
+        </svg>
+      </CameraRig>
+
+      {/* HUD Layer */}
+      <PillBadge text="THE ATTEMPT #7 WALL" x={960} y={96} enterFrame={Math.round(fps * 0.45)} />
+
+      <RollingCounter
+        label="QUIT RATE"
+        value={quitPct}
+        suffix="%"
+        x={1820}
+        y={158}
+        fontSize={118}
+        labelSize={20}
+        align="right"
+      />
+
+      <PunchlineCallout
+        text="92% QUIT EARLY."
+        subtext="BEFORE THE CURVE EVER TURNS"
+        x={960}
+        y={945}
+        enterFrame={Math.round(durationInFrames * 0.65)}
+        exitFrame={durationInFrames - 8}
+        fontSize={62}
+      />
     </div>
   );
 };
