@@ -1,0 +1,57 @@
+{
+  "title": "The Visibility Paradox: Why the Best Product Rarely Wins",
+  "fps": 60,
+  "width": 1920,
+  "height": 1080,
+  "scenes": [
+    {
+      "id": "vis-01-vaulted-diamond",
+      "type": "vaulted-diamond",
+      "durationSec": 12.74,
+      "narration": "Being the absolute best in the world means nothing if nobody knows you exist. A ten-out-of-ten diamond locked inside a dark vault generates the exact same revenue as a rock."
+    },
+    {
+      "id": "vis-02-lighthouse",
+      "type": "lighthouse-beam",
+      "durationSec": 10.61,
+      "narration": "Meanwhile, a solid seven-out-of-ten product mounted on top of a lighthouse beam sweeps across an entire ocean of buyers—and wins the market every single time."
+    },
+    {
+      "id": "vis-03-noise-ocean",
+      "type": "noise-ocean",
+      "durationSec": 13.16,
+      "narration": "We do not live in a shortage of great products or talented people. We live in an ocean of noise, where the rarest resource on earth is simply earning someone's attention."
+    },
+    {
+      "id": "vis-04-amplifier",
+      "type": "signal-amplifier",
+      "durationSec": 10.61,
+      "narration": "Great work without distribution is a whisper in a hurricane. Distribution is the amplifier that turns quiet craftsmanship into an unmistakable signal people actually hear."
+    },
+    {
+      "id": "vis-05-funnel",
+      "type": "discovery-funnel",
+      "durationSec": 12.74,
+      "narration": "Every business runs on a simple funnel: people cannot buy from you until they trust you, and they cannot trust you until they discover you. Visibility is always step one."
+    },
+    {
+      "id": "vis-06-spotlight",
+      "type": "spotlight-contrast",
+      "durationSec": 11.46,
+      "narration": "It feels unfair when someone less skilled outsells a quiet master. Yet buyers are not rewarding mediocrity—they can only choose from the options standing inside the spotlight."
+    },
+    {
+      "id": "vis-07-bridge",
+      "type": "distribution-bridge",
+      "durationSec": 11.04,
+      "narration": "Think of marketing and content not as bragging, but as building a bridge between the value you created and the people actively searching for a solution."
+    },
+    {
+      "id": "vis-08-finale",
+      "type": "seen-wins-finale",
+      "durationSec": 7.21,
+      "narration": "Never hide your best work behind modesty. Build something genuinely great—and then make it impossible to miss."
+    }
+  ],
+  "audioFile": "audio/visibility-paradox.wav"
+}

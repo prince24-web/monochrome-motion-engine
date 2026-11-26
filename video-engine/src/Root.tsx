@@ -21,6 +21,7 @@ import hundredShotRaw from './data/hundred-shot-rule.json';
 import leverageTrapRaw from './data/leverage-trap.json';
 import openingDemoRaw from './data/opening-demo.json';
 import smartBrokeRaw from './data/smart-people-broke.json';
+import visibilityRaw from './data/visibility-paradox.json';
 import {
   DopamineComposition,
   DopamineStoryboard,
@@ -53,6 +54,11 @@ import {
 } from './ReputationComposition';
 import { VideoStoryboard } from './schema/storyboard';
 import { getTotalFrames, VideoComposition } from './VideoComposition';
+import {
+  getVisibilityTotalFrames,
+  VisibilityComposition,
+  VisibilityStoryboard,
+} from './VisibilityComposition';
 
 const openingDemo = openingDemoRaw as VideoStoryboard;
 const fullOnePercent = fullOnePercentRaw as VideoStoryboard;
@@ -65,6 +71,7 @@ const attentionTax = attentionTaxRaw as AttentionStoryboard;
 const compoundingReputation = compoundingRepRaw as ReputationStoryboard;
 const asymmetricBet = asymmetricBetRaw as AsymmetricStoryboard;
 const environmentWillpower = environmentRaw as EnvironmentStoryboard;
+const visibilityParadox = visibilityRaw as VisibilityStoryboard;
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -188,6 +195,17 @@ export const RemotionRoot: React.FC = () => {
         height={environmentWillpower.height}
         defaultProps={{
           storyboard: environmentWillpower,
+        }}
+      />
+      <Composition
+        id="VisibilityParadox"
+        component={VisibilityComposition}
+        durationInFrames={getVisibilityTotalFrames(visibilityParadox)}
+        fps={visibilityParadox.fps}
+        width={visibilityParadox.width}
+        height={visibilityParadox.height}
+        defaultProps={{
+          storyboard: visibilityParadox,
         }}
       />
     </>
