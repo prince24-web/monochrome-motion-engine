@@ -6,6 +6,7 @@ import fullOnePercentRaw from './data/full-one-percent.json';
 import hundredShotRaw from './data/hundred-shot-rule.json';
 import leverageTrapRaw from './data/leverage-trap.json';
 import openingDemoRaw from './data/opening-demo.json';
+import smartBrokeRaw from './data/smart-people-broke.json';
 import {
   DopamineComposition,
   DopamineStoryboard,
@@ -16,6 +17,11 @@ import {
   HundredShotComposition,
   HundredShotStoryboard,
 } from './HundredShotComposition';
+import {
+  getSmartBrokeTotalFrames,
+  SmartBrokeComposition,
+  SmartBrokeStoryboard,
+} from './SmartBrokeComposition';
 import {
   getLeverageTotalFrames,
   LeverageComposition,
@@ -30,6 +36,7 @@ const consistencyBeatsTalent = consistencyRaw as VideoStoryboard;
 const leverageTrap = leverageTrapRaw as LeverageStoryboard;
 const dopamineDebt = dopamineDebtRaw as DopamineStoryboard;
 const hundredShotRule = hundredShotRaw as HundredShotStoryboard;
+const smartPeopleBroke = smartBrokeRaw as SmartBrokeStoryboard;
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -98,6 +105,17 @@ export const RemotionRoot: React.FC = () => {
         height={hundredShotRule.height}
         defaultProps={{
           storyboard: hundredShotRule,
+        }}
+      />
+      <Composition
+        id="SmartPeopleBroke"
+        component={SmartBrokeComposition}
+        durationInFrames={getSmartBrokeTotalFrames(smartPeopleBroke)}
+        fps={smartPeopleBroke.fps}
+        width={smartPeopleBroke.width}
+        height={smartPeopleBroke.height}
+        defaultProps={{
+          storyboard: smartPeopleBroke,
         }}
       />
     </>
