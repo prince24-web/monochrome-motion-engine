@@ -6,6 +6,7 @@ import {
   getAttentionTotalFrames,
 } from './AttentionComposition';
 import attentionTaxRaw from './data/attention-tax.json';
+import compoundingRepRaw from './data/compounding-reputation.json';
 import consistencyRaw from './data/consistency-beats-talent.json';
 import dopamineDebtRaw from './data/dopamine-debt.json';
 import fullOnePercentRaw from './data/full-one-percent.json';
@@ -33,6 +34,11 @@ import {
   LeverageComposition,
   LeverageStoryboard,
 } from './LeverageComposition';
+import {
+  getReputationTotalFrames,
+  ReputationComposition,
+  ReputationStoryboard,
+} from './ReputationComposition';
 import { VideoStoryboard } from './schema/storyboard';
 import { getTotalFrames, VideoComposition } from './VideoComposition';
 
@@ -44,6 +50,7 @@ const dopamineDebt = dopamineDebtRaw as DopamineStoryboard;
 const hundredShotRule = hundredShotRaw as HundredShotStoryboard;
 const smartPeopleBroke = smartBrokeRaw as SmartBrokeStoryboard;
 const attentionTax = attentionTaxRaw as AttentionStoryboard;
+const compoundingReputation = compoundingRepRaw as ReputationStoryboard;
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -134,6 +141,17 @@ export const RemotionRoot: React.FC = () => {
         height={attentionTax.height}
         defaultProps={{
           storyboard: attentionTax,
+        }}
+      />
+      <Composition
+        id="CompoundingReputation"
+        component={ReputationComposition}
+        durationInFrames={getReputationTotalFrames(compoundingReputation)}
+        fps={compoundingReputation.fps}
+        width={compoundingReputation.width}
+        height={compoundingReputation.height}
+        defaultProps={{
+          storyboard: compoundingReputation,
         }}
       />
     </>

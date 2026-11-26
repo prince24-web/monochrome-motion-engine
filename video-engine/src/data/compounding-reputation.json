@@ -1,0 +1,57 @@
+{
+  "title": "The Compounding of Reputation: Why Trust Takes Years and Breaks in Seconds",
+  "fps": 60,
+  "width": 1920,
+  "height": 1080,
+  "scenes": [
+    {
+      "id": "rep-01-brick-tower",
+      "type": "brick-tower",
+      "durationSec": 13.62,
+      "narration": "Reputation is the most valuable asset you will ever own—and the slowest one to build. It stacks like an elevator moving one quiet brick at a time across years of kept promises."
+    },
+    {
+      "id": "rep-02-keystone",
+      "type": "keystone-pull",
+      "durationSec": 12.77,
+      "narration": "Yet while trust climbs like an elevator, it drops like a cliff. One greedy shortcut, one broken promise, and a single pulled keystone can collapse a decade of credibility overnight."
+    },
+    {
+      "id": "rep-03-trust-wave",
+      "type": "trust-wave",
+      "durationSec": 11.5,
+      "narration": "When people truly trust you, friction disappears. Deals close in one message instead of twenty meetings, because your track record answers every doubt before you even speak."
+    },
+    {
+      "id": "rep-04-referral-tree",
+      "type": "referral-tree",
+      "durationSec": 11.92,
+      "narration": "And unlike paid ads that vanish the second you stop spending, reputation compounds exponentially. One delighted person tells three others, who tell nine, creating a silent referral engine."
+    },
+    {
+      "id": "rep-05-glass-bridge",
+      "type": "glass-bridge",
+      "durationSec": 13.2,
+      "narration": "Every promise you keep lays another span of steel across the gap between where you are and the biggest opportunities of your life. Opportunities always flow toward the most trusted name."
+    },
+    {
+      "id": "rep-06-ledger",
+      "type": "promise-ledger",
+      "durationSec": 11.07,
+      "narration": "Most people underestimate small commitments—showing up on time, delivering what you said, owning mistakes fast. Over five hundred reps, that ledger becomes unshakeable proof of character."
+    },
+    {
+      "id": "rep-07-shield",
+      "type": "invisible-shield",
+      "durationSec": 11.07,
+      "narration": "Years of integrity also build an invisible shield. When noise, critics, or misunderstandings inevitably arrive, your history defends you far louder than any excuse ever could."
+    },
+    {
+      "id": "rep-08-aura",
+      "type": "compounding-aura",
+      "durationSec": 10.22,
+      "narration": "Protect your word like your life depends on it. Because long before you ever shake someone's hand, your reputation has already entered the room."
+    }
+  ],
+  "audioFile": "audio/compounding-reputation.wav"
+}
