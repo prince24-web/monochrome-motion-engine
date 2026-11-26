@@ -3,6 +3,7 @@ import { Composition } from 'remotion';
 import consistencyRaw from './data/consistency-beats-talent.json';
 import dopamineDebtRaw from './data/dopamine-debt.json';
 import fullOnePercentRaw from './data/full-one-percent.json';
+import hundredShotRaw from './data/hundred-shot-rule.json';
 import leverageTrapRaw from './data/leverage-trap.json';
 import openingDemoRaw from './data/opening-demo.json';
 import {
@@ -10,6 +11,11 @@ import {
   DopamineStoryboard,
   getDopamineTotalFrames,
 } from './DopamineComposition';
+import {
+  getHundredShotTotalFrames,
+  HundredShotComposition,
+  HundredShotStoryboard,
+} from './HundredShotComposition';
 import {
   getLeverageTotalFrames,
   LeverageComposition,
@@ -23,6 +29,7 @@ const fullOnePercent = fullOnePercentRaw as VideoStoryboard;
 const consistencyBeatsTalent = consistencyRaw as VideoStoryboard;
 const leverageTrap = leverageTrapRaw as LeverageStoryboard;
 const dopamineDebt = dopamineDebtRaw as DopamineStoryboard;
+const hundredShotRule = hundredShotRaw as HundredShotStoryboard;
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -80,6 +87,17 @@ export const RemotionRoot: React.FC = () => {
         height={dopamineDebt.height}
         defaultProps={{
           storyboard: dopamineDebt,
+        }}
+      />
+      <Composition
+        id="HundredShotRule"
+        component={HundredShotComposition}
+        durationInFrames={getHundredShotTotalFrames(hundredShotRule)}
+        fps={hundredShotRule.fps}
+        width={hundredShotRule.width}
+        height={hundredShotRule.height}
+        defaultProps={{
+          storyboard: hundredShotRule,
         }}
       />
     </>
