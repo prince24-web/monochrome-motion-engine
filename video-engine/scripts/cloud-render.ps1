@@ -1,7 +1,7 @@
 param(
-  [ValidateSet("FullOnePercent", "OpeningDemo")]
-  [string]$Composition = "FullOnePercent",
-  [string]$OutputName = "full-one-percent.mp4",
+  [ValidateSet("ConsistencyBeatsTalent", "FullOnePercent", "OpeningDemo")]
+  [string]$Composition = "ConsistencyBeatsTalent",
+  [string]$OutputName = "consistency-beats-talent.mp4",
   [string]$Crf = "17"
 )
 

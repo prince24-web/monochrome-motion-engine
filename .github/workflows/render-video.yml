@@ -4,17 +4,18 @@ on:
   workflow_dispatch:
     inputs:
       composition:
-        description: 'Remotion composition ID (FullOnePercent or OpeningDemo)'
+        description: 'Remotion composition ID'
         required: true
-        default: 'FullOnePercent'
+        default: 'ConsistencyBeatsTalent'
         type: choice
         options:
+          - ConsistencyBeatsTalent
           - FullOnePercent
           - OpeningDemo
       output_name:
         description: 'Output MP4 filename'
         required: true
-        default: 'full-one-percent.mp4'
+        default: 'consistency-beats-talent.mp4'
         type: string
       crf:
         description: 'H.264 CRF quality (lower = higher quality, 16-20 recommended)'

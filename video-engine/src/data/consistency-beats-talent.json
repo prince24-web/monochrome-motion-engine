@@ -1,0 +1,176 @@
+{
+  "title": "Why Consistency Beats Talent",
+  "fps": 60,
+  "width": 1920,
+  "height": 1080,
+  "scenes": [
+    {
+      "id": "cbt-01-hook",
+      "type": "one-percent-buyer",
+      "durationSec": 7.77,
+      "narration": "You don't need rare talent to beat ninety-nine percent of people. You only need to get one percent better every single day.",
+      "props": {
+        "counterLabel": "COMPOUNDED SKILL",
+        "counterStart": 100,
+        "counterMid": 940,
+        "counterEnd": 3778,
+        "counterPrefix": "",
+        "pillText": "1% DAILY",
+        "highlightIndex": 46
+      }
+    },
+    {
+      "id": "cbt-02-breakthrough-myth",
+      "type": "progress-ring-goal",
+      "durationSec": 6.71,
+      "narration": "Most people think success requires massive overnight breakthroughs, so they wait for a burst of genius that never arrives.",
+      "props": {
+        "pillText": "NEEDS GENIUS",
+        "counterLabel": "DAY 1 OUTPUT",
+        "percentStart": 1,
+        "percentEnd": 12,
+        "targetLabel": "TARGET: 100 %"
+      }
+    },
+    {
+      "id": "cbt-03-silent-week",
+      "type": "failing-gauge",
+      "durationSec": 7.41,
+      "narration": "And the moment they don't see instant results in week one, they treat the silence as proof that they aren't gifted.",
+      "props": {
+        "pillText": "PROOF IT'S NOT WORKING",
+        "leftLabel": "GIVING UP",
+        "rightLabel": "COMPOUNDING",
+        "ignoredLabel": "3 QUIET WEEKS",
+        "ignoredCount": 3
+      }
+    },
+    {
+      "id": "cbt-04-resetting-zero",
+      "type": "morphing-shape",
+      "durationSec": 7.96,
+      "narration": "So they keep jumping from one new strategy to the next, resetting their progress back to zero before compounding can ever begin.",
+      "props": {
+        "versionStart": 1,
+        "versionEnd": 6,
+        "lovedStart": 1000,
+        "lovedEnd": 120,
+        "pillText": "RESETS TO ZERO"
+      }
+    },
+    {
+      "id": "cbt-05-talent-not-required",
+      "type": "majority-crowd",
+      "durationSec": 4.06,
+      "narration": "But winning never required being born smarter than the majority.",
+      "props": {
+        "leftLabel": "WINNING",
+        "majorityLabel": "NATURAL TALENT 51 %",
+        "majorityPercent": 51,
+        "pillText": "NOT REQUIRED"
+      }
+    },
+    {
+      "id": "cbt-06-drop-off-scale",
+      "type": "wireframe-globe",
+      "durationSec": 8.94,
+      "narration": "Millions of talented people start with huge motivation every year, yet almost none of them are still showing up six months later.",
+      "props": {
+        "topLabelA": "START MOTIVATED",
+        "countA": 10000000,
+        "pillA": "10 MILLION START",
+        "topLabelB": "STILL SHOWING UP",
+        "countB": 200000,
+        "pillB": "ONLY 2% REMAIN"
+      }
+    },
+    {
+      "id": "cbt-07-top-one-percent",
+      "type": "nested-zoom-grid",
+      "durationSec": 11.38,
+      "narration": "Just showing up every week puts you ahead of ninety-nine percent of starters. Showing up every day puts you in the top one percent of that one percent.",
+      "props": {
+        "outerPill": "TOP 1%",
+        "outerCounterLabel": "WEEKLY CONSISTENCY",
+        "outerCounterValue": 100000,
+        "bottomCaption": "10,000,000 STARTERS",
+        "innerPill": "1% OF THAT 1%"
+      }
+    },
+    {
+      "id": "cbt-08-stacking-reps",
+      "type": "buyer-queue",
+      "durationSec": 7.11,
+      "narration": "Every single rep quietly stacks behind you, turning tiny invisible habits into an unstoppable wave of skill.",
+      "props": {
+        "counterLabel": "REPS STACKED",
+        "counterStart": 100,
+        "counterEnd": 36500,
+        "pillText": "36,500 REPS STACKED"
+      }
+    },
+    {
+      "id": "cbt-09-quiet-phase",
+      "type": "timeline-scrubber",
+      "durationSec": 7.61,
+      "narration": "For months it looks like nothing is happening—quiet days, flat charts, zero applause—while your baseline quietly compounds underneath.",
+      "props": {
+        "leftMetricLabel": "QUIET DAYS",
+        "leftMetricValue": "99 / 100",
+        "rightMetricLabel": "COMPOUND VALUE",
+        "moneyStart": 100,
+        "moneyEnd": 37780,
+        "pillText": "THE QUIET PHASE",
+        "startAge": 1,
+        "endAge": 365
+      }
+    },
+    {
+      "id": "cbt-10-compounding-math",
+      "type": "wireframe-calculator",
+      "durationSec": 11,
+      "narration": "Because the math of compounding doesn't care about raw talent. One point zero one to the power of three hundred sixty-five equals thirty-seven point seven eight.",
+      "props": {
+        "screenHeader": "COMPOUNDING",
+        "line1": "1.01 ^ 365",
+        "line2": "× DAILY REPS",
+        "resultLine": "= 37.78x",
+        "sideBoxTitle": "RAW TALENT",
+        "sideBoxSubtitle": "WITHOUT REPS",
+        "pillText": "MATHEMATICALLY BEATEN"
+      }
+    },
+    {
+      "id": "cbt-11-brain-impatience",
+      "type": "tribe-scale",
+      "durationSec": 12.69,
+      "narration": "Your brain hates slow progress because it is wired for immediate feedback. So a handful of boring days feels like failure, even when the math is working in your favor.",
+      "props": {
+        "introPill": "SLOW FEELS BROKEN",
+        "groupPill": "IMMEDIATE FEEDBACK",
+        "groupSizeLabel": "7 DAYS",
+        "rejectedEnd": 30,
+        "everyonePill": "ZERO APPLAUSE",
+        "scalePill": "A HANDFUL OF BORING DAYS",
+        "leftPanLabel": "5 FLAT DAYS",
+        "rightPanLabel": "365 DAYS OF MATH",
+        "warningLabel": "FEELS POINTLESS"
+      }
+    },
+    {
+      "id": "cbt-12-finale",
+      "type": "growth-curve",
+      "durationSec": 9.31,
+      "narration": "Talent gives you a head start, but consistency gives you the curve. And one percent every day beats talent every single time.",
+      "props": {
+        "counterLabel": "COMPOUNDED OUTPUT",
+        "moneyStart": 1000,
+        "moneyEnd": 377800,
+        "headlineText": "1% DAILY WINS.",
+        "crowdPillText": "THE 1% WHO STAY",
+        "axisLabel": "DAYS"
+      }
+    }
+  ],
+  "audioFile": "audio/consistency-beats-talent.wav"
+}
