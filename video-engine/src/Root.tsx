@@ -1,9 +1,15 @@
 import React from 'react';
 import { Composition } from 'remotion';
 import consistencyRaw from './data/consistency-beats-talent.json';
+import dopamineDebtRaw from './data/dopamine-debt.json';
 import fullOnePercentRaw from './data/full-one-percent.json';
 import leverageTrapRaw from './data/leverage-trap.json';
 import openingDemoRaw from './data/opening-demo.json';
+import {
+  DopamineComposition,
+  DopamineStoryboard,
+  getDopamineTotalFrames,
+} from './DopamineComposition';
 import {
   getLeverageTotalFrames,
   LeverageComposition,
@@ -16,6 +22,7 @@ const openingDemo = openingDemoRaw as VideoStoryboard;
 const fullOnePercent = fullOnePercentRaw as VideoStoryboard;
 const consistencyBeatsTalent = consistencyRaw as VideoStoryboard;
 const leverageTrap = leverageTrapRaw as LeverageStoryboard;
+const dopamineDebt = dopamineDebtRaw as DopamineStoryboard;
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -62,6 +69,17 @@ export const RemotionRoot: React.FC = () => {
         height={leverageTrap.height}
         defaultProps={{
           storyboard: leverageTrap,
+        }}
+      />
+      <Composition
+        id="DopamineDebt"
+        component={DopamineComposition}
+        durationInFrames={getDopamineTotalFrames(dopamineDebt)}
+        fps={dopamineDebt.fps}
+        width={dopamineDebt.width}
+        height={dopamineDebt.height}
+        defaultProps={{
+          storyboard: dopamineDebt,
         }}
       />
     </>
