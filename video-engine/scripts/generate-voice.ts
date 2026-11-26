@@ -78,8 +78,9 @@ async function synthesizeText(
   timeoutMs = 150_000
 ): Promise<{ pcm: Buffer; sampleRate: number }> {
   const prompt = [
-    'Read the following narration in a calm, clear, authoritative documentary explainer tone.',
-    'Keep crisp pacing with brief natural pauses between sentences, matching a modern minimalist video essay.',
+    'Read the following narration in an energetic, upbeat, slightly higher-pitched, and engaging viral explainer tone.',
+    'Sound confident, bright, and excited—with crisp punchy emphasis on key numbers and insights, never soft or sleepy.',
+    'Keep snappy pacing with short natural pauses between sentences.',
     'Do not add any extra words or commentary.',
     '',
     text,
